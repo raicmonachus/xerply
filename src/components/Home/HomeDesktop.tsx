@@ -255,7 +255,7 @@ export default function HomeDesktop() {
           </div>
         </div>
         { /* Value prop section - Intelligent */}
-        <div className="self-stretch px-12 py-24 flex justify-center items-center gap-24">
+        <div className="self-stretch px-12 py-24 flex justify-center items-center gap-24 relative">
           <div className="image-wrapper flex-1 w-1/2 h-[592px] relative">
             <Image alt="Patterns" src="/assets/images/ai-business-image.png" width={384} height={592} className="left-0 top-0 absolute rounded-lg" />
             <div className="w-96 p-4 left-[204.09px] top-[81px] absolute bg-white-alpha-5 backdrop-blur-lg rounded-2xl shadow-lg flex flex-col justify-start items-center gap-6">
@@ -302,6 +302,180 @@ export default function HomeDesktop() {
               </Button>
             </div>
           </div>
+          <Image alt="Patterns" src="/assets/images/Patterns_3.svg" width={640} height={120} className="-right-8 -bottom-16 absolute" />
+        </div>
+        { /* Value prop section - Affordable */}
+        <div className="self-stretch px-12 py-24 relative flex justify-center items-center gap-24">
+          <div className="flex-1 w-1/2 flex flex-col justify-start items-start gap-8">
+            <div className="self-stretch flex flex-col justify-start items-start gap-8">
+              <div className="self-stretch flex flex-col justify-start items-start gap-4">
+                <div className="flex justify-start items-center">
+                  <div className="justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">Affordable</div>
+                </div>
+                <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                  <div className="self-stretch justify-start"><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]">Enterprise-grade </span><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">solutions for every budget</span></div>
+                  <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Unlock powerful AI-driven ERP capabilities without breaking the bank. Our flexible pricing ensures you get maximum value for your investment.</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-start items-center gap-6">
+              <Button variant="filled" size="lg">
+                Try it free
+              </Button>
+              <Button variant="ghost" size="md" icon={ChevronRight} iconPosition="right">
+                Watch demo
+              </Button>
+            </div>
+          </div>
+          <div className="image-wrapper flex-1 w-1/2 h-[656px] relative">
+            <Image alt="Patterns" src="/assets/images/Patterns_4.svg" width={208} height={320} className="left-12 top-[480px] absolute" />
+            <Image alt="Affordable" src="/assets/images/budget-image.png" width={320} height={320} className="left-0 top-[168px] absolute rounded-[32px]" />
+            <div className="w-52 h-48 p-6 left-[271.30px] top-0 absolute bg-neutral-200 rounded-md shadow-[0px_16px_40px_-8px_rgba(88,92,95,0.16)] flex flex-col justify-start items-start gap-11">
+              <div className="self-stretch flex flex-col justify-start items-center gap-6">
+                <div className="self-stretch flex flex-col justify-start items-center gap-1.5">
+                  <div className="self-stretch text-center justify-start text-primary-600 text-sm font-bold font-inter leading-none">Free</div>
+                  <div className="self-stretch text-center justify-start"><span className="text-neutral-800 text-4xl font-medium font-inter leading-[48.84px]">$0</span><span className="text-neutral-800 text-lg font-medium font-inter leading-snug">/mo</span></div>
+                  <div className="self-stretch text-center justify-start text-neutral-800 text-xs font-normal font-source-sans-pro leading-none">or $0 yearly</div>
+                </div>
+                <div className="self-stretch px-4 py-2 bg-primary-50 rounded-md flex justify-center items-center">
+                  <div className="justify-start text-primary-600 text-[10.06px] font-semibold font-inter leading-none">Get started</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-52 h-48 p-6 left-[378.68px] top-[230.32px] absolute bg-primary-50 rounded-md shadow-[0px_16px_40px_-8px_rgba(88,92,95,0.16)] flex flex-col justify-start items-start gap-11">
+              <div className="self-stretch flex flex-col justify-start items-center gap-6">
+                <div className="self-stretch flex flex-col justify-start items-center gap-1.5">
+                  <div className="self-stretch text-center justify-start text-primary-600 text-sm font-bold font-inter leading-none">Business</div>
+                  <div className="self-stretch text-center justify-start"><span className="text-neutral-800 text-4xl font-medium font-inter leading-[48.84px]">$29</span><span className="text-neutral-800 text-lg font-medium font-inter leading-snug">/mo</span></div>
+                  <div className="self-stretch text-center justify-start text-neutral-800 text-xs font-normal font-source-sans-pro leading-none">or $199 yearly</div>
+                </div>
+                <div className="self-stretch px-4 py-2 bg-primary-600 rounded-md flex justify-center items-center">
+                  <div className="justify-start text-white-alpha-10/95 text-[10.06px] font-semibold font-inter leading-none">Get started</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-52 h-48 p-6 left-[271.30px] top-[460.63px] absolute bg-neutral-50 rounded-md shadow-[0px_16px_40px_-8px_rgba(88,92,95,0.16)] flex flex-col justify-start items-start gap-11">
+              <div className="self-stretch flex flex-col justify-start items-center gap-6">
+                <div className="self-stretch flex flex-col justify-start items-center gap-1.5">
+                  <div className="self-stretch text-center justify-start text-primary-600 text-sm font-bold font-inter leading-none">Enterprise</div>
+                  <div className="self-stretch text-center justify-start"><span className="text-neutral-800 text-4xl font-medium font-inter leading-[48.84px]">$49</span><span className="text-neutral-800 text-lg font-medium font-inter leading-snug">/mo</span></div>
+                  <div className="self-stretch text-center justify-start text-neutral-800 text-xs font-normal font-source-sans-pro leading-none">or $199 yearly</div>
+                </div>
+                <div className="self-stretch px-4 py-2 bg-primary-50 rounded-md flex justify-center items-center">
+                  <div className="justify-start text-primary-600 text-[10.06px] font-semibold font-inter leading-none">Get started</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        { /* Value prop section - Integrations */}
+        <div className="self-stretch px-12 py-24 flex justify-center items-center gap-24">
+          <div className="image-wrapper flex-1 w-1/2 h-[592px] relative">
+            <Image alt="Integrations" src="/assets/images/young-woman.png" width={320} height={592} className="left-56 top-0 absolute rounded-lg" />
+            <div className="left-0 top-[17.82px] absolute flex flex-col justify-center items-center gap-0.5">
+              <div className="w-80 min-w-56 p-6 bg-primary-600 rounded-xl shadow-[0px_12.231521606445312px_30.57880401611328px_-6.115760803222656px_rgba(88,92,95,0.16)] flex justify-center items-center gap-5">
+                <div className="flex-1 flex flex-col justify-center items-center gap-1.5">
+                  <Image alt="Icon" src="/assets/logo/xerply-logo-wh.svg" width={200} height={40} />
+                </div>
+              </div>
+              <Image alt="Connector" src="/assets/images/Connector_vertical.png" width={24} height={92} />
+              <div className="w-80 min-w-56 p-5 bg-primary-50 rounded-xl shadow-[0px_12.231521606445312px_30.57880401611328px_-6.115760803222656px_rgba(88,92,95,0.16)] flex justify-start items-center gap-5">
+                <Image alt="Icon" src="/assets/icons/sat.svg" width={56} height={56} />
+                <div className="flex-1 flex flex-col justify-start items-start gap-1.5">
+                  <div className="self-stretch flex flex-col justify-start items-start">
+                    <div className="self-stretch justify-start text-neutral-800 text-xs font-semibold font-source-sans-pro leading-tight">Tax administration service</div>
+                  </div>
+                  <div className="self-stretch flex flex-col justify-start items-start overflow-hidden">
+                    <div className="self-stretch justify-start text-neutral-800 text-2xl font-bold font-inter leading-7">SAT</div>
+                  </div>
+                  <div className="self-stretch pt-4 flex justify-end items-start gap-[3.06px]">
+                    <div className="flex flex-col justify-start items-start">
+                      <div className="self-stretch justify-start text-neutral-800 text-[9px] font-medium font-inter leading-[10px]">Configuring connection...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Image alt="Connector" src="/assets/images/Connector_vertical.png" width={24} height={92} />
+              <div className="w-80 min-w-56 p-5 bg-neutral-50 rounded-xl shadow-[0px_12.231521606445312px_30.57880401611328px_-6.115760803222656px_rgba(88,92,95,0.16)] flex justify-start items-center gap-5">
+                <div className="flex-1 flex flex-col justify-start items-start gap-1.5">
+                  <div className="self-stretch flex flex-col justify-start items-start">
+                    <div className="self-stretch justify-start text-neutral-800 text-xs font-semibold font-source-sans-pro leading-tight">Financial</div>
+                  </div>
+                  <div className="flex flex-col justify-start items-start">
+                    <div className="self-stretch justify-start text-primary-600 text-sm font-semibold font-source-sans-pro leading-tight">Choose one entity:</div>
+                  </div>
+                  <div className="flex justify-start items-center gap-2">
+                    <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                      <Image alt="Icon" src="/assets/icons/HSBC.svg" width={60} height={17} />
+                    </div>
+                    <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                      <Image alt="Icon" src="/assets/icons/Citi.svg" width={24} height={17} />
+                    </div>
+                    <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                      <Image alt="Icon" src="/assets/icons/BBVA_2019.svg" width={60} height={17} />
+                    </div>
+                    <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                      <Image alt="Icon" src="/assets/icons/Citibanamex.svg" width={20} height={20} />
+                    </div>
+                  </div>
+                  <div className="self-stretch pt-4 flex justify-end items-start gap-[3.06px]">
+                    <div className="flex flex-col justify-start items-start">
+                      <div className="self-stretch justify-start text-neutral-800 text-[9px] font-medium font-inter leading-[10px]">Configuring connection...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 w-1/2 flex flex-col justify-start items-start gap-8">
+            <div className="self-stretch flex flex-col justify-start items-start gap-8">
+              <div className="self-stretch flex flex-col justify-start items-start gap-4">
+                <div className="flex justify-start items-center">
+                  <div className="justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">Integrations</div>
+                </div>
+                <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                  <div className="self-stretch justify-start"><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">Connect</span><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]"> your entire business ecosystem</span></div>
+                  <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Seamlessly integrate with your existing tools and platforms. Our robust API and wide-ranging compatibility ensure smooth data flow across your business.</div>
+                </div>
+              </div>
+            </div>
+            <ul className="self-stretch flex flex-col justify-start items-start gap-2 list-disc ml-6">
+              <li>CRM systems</li>
+              <li>Financial platforms</li>
+              <li>Productivity tools</li>
+            </ul>
+            <div className="flex justify-start items-center gap-6">
+              <Button variant="filled" size="lg">
+                Try it free
+              </Button>
+              <Button variant="ghost" size="md" icon={ChevronRight} iconPosition="right">
+                Watch demo
+              </Button>
+            </div>
+          </div>
+        </div>
+        { /* CTA Section */}
+        <div className="self-stretch relative flex flex-col justify-start items-center">
+          <div className="w-[910.32px] h-[910.32px] left-[-463px] top-[919.59px] absolute origin-top-left rotate-[-57.78deg] bg-cyan-50 rounded-[236.46px]" />
+          <div className="self-stretch px-14 py-28 flex flex-col justify-start items-center gap-20">
+            <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+              <div className="w-full max-w-[768px] flex flex-col justify-start items-center gap-8">
+                <div className="self-stretch flex flex-col justify-start items-center gap-6">
+                  <div className="self-stretch text-center justify-start"><span className="text-5xl font-medium font-inter leading-[58px]">Ready to </span><span className="text-5xl font-bold font-inter leading-[58px]">transform your business?</span></div>
+                  <div className="self-stretch text-center justify-start text-lg font-normal font-source-sans-pro leading-7">Experience the power of autonomous AI-driven ERP with a personalized demonstration tailored to your business needs.</div>
+                </div>
+                <div className="flex justify-start items-start gap-4">
+                  <Button variant="filled" size="lg">
+                    Try it free
+                  </Button>
+                  <Button variant="outline" size="lg">
+                    Contact sales
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Image alt="Business" src="/assets/images/owners-image.png" width={940} height={600} className='z-10' />
         </div>
       </main>
     </>

@@ -168,12 +168,6 @@ export default function Hero() {
           {/* Integration Progress Card */}
           <div className="w-96 min-w-60 px-6 py-4 left-[200px] top-[580px] absolute bg-neutral-100 rounded-xl shadow-lg flex justify-start items-center gap-5">
             <div className="flex-1 flex flex-col justify-start items-start gap-1.5">
-              <div className="self-stretch flex flex-col justify-center items-center gap-1">
-                <div className="self-stretch h-1 relative bg-neutral-50 rounded overflow-hidden">
-                  <div className="w-56 h-1 left-[-0.39px] top-[0.37px] absolute bg-primary-500" />
-                </div>
-                <div className="self-stretch justify-start text-neutral-800 text-sm font-semibold font-inter leading-none">Step 2/3</div>
-              </div>
               <div className="self-stretch py-1 flex justify-between items-center overflow-hidden">
                 <div className="w-16 h-16 p-4 bg-primary-600 rounded-lg shadow-lg flex justify-center items-center gap-5">
                   <div className="flex flex-col justify-center items-center">
@@ -192,8 +186,12 @@ export default function Hero() {
                   <Image alt="Citi" src="/assets/icons/Citi.svg" width={30} height={30} />                      
                 </div>
               </div>
-              <div className="self-stretch pt-4 flex justify-end items-start gap-[3.44px]">
-                <div className="flex flex-col justify-start items-start">
+              <div className="self-stretch flex flex-col justify-center items-center gap-1 mt-4">
+                <div className="self-stretch h-1 relative bg-neutral-50 rounded overflow-hidden">
+                  <div className="w-56 h-1 left-[-0.39px] top-[0.37px] absolute bg-primary-500" />
+                </div>
+                <div className='flex flex-row justify-between items-center w-full'>
+                  <div className="self-stretch justify-start text-neutral-800 text-sm font-semibold font-inter leading-none">Step 2/3</div>
                   <div className="self-stretch justify-start text-neutral-800 text-[10.11px] font-medium font-inter leading-3">Configuring connection...</div>
                 </div>
               </div>

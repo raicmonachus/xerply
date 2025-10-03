@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
+import Testimonial from '@/components/Testimonial';
+import Footer from '@/components/Footer';
 import HomeDesktop from '@/components/Home/HomeDesktop';
 import Solutions from '@/components/Solutions';
 import Features from '@/components/Features';
@@ -38,11 +40,13 @@ export default function MainLayout() {
   };
 
   return (
-    <div className="w-screen h-screen relative bg-neutral-50">
+    <div className="w-screen min-h-screen relative bg-neutral-50">
       <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
       <main>
         {renderPage()}
       </main>
+      <Testimonial />
+      <Footer currentPage={currentPage} onNavigate={handleNavigate} />
     </div>
   );
 }
