@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Button } from '../ui';
 
 export type PageType = 'home' | 'solutions' | 'features' | 'pricing' | 'about' | 'contact';
 
@@ -43,12 +44,12 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
           </div>
         </div>
         <div className="flex justify-start items-center gap-3.5">
-          <div className="px-6 py-2 rounded-lg outline outline-[1.50px] outline-offset-[-1.50px] outline-primary-600 flex justify-center items-center">
-            <div className="justify-start text-primary-600 text-sm font-semibold font-['Inter'] leading-tight">Log in</div>
-          </div>
-          <div className="px-6 py-2 bg-primary-600 rounded-lg flex justify-center items-center">
-            <div className="justify-start text-white-alpha-10/95 text-sm font-semibold font-['Inter'] leading-tight">Try it free</div>
-          </div>
+          <Button variant="outline" size="md">
+            Log in
+          </Button>
+          <Button variant="filled" size="md">
+            Try it free
+          </Button>
         </div>
       </div>
     </div>

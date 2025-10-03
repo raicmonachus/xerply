@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../ui';
 
 export default function Solutions() {
   return (
@@ -17,12 +18,12 @@ export default function Solutions() {
           </div>
           <div className="inline-flex justify-start items-start gap-4">
             <div className="flex justify-start items-start gap-4">
-              <div className="px-6 py-3 bg-primary-600 rounded-lg flex justify-center items-center">
-                <div className="justify-start text-white-alpha-10/95 text-sm font-semibold fontinter leading-tight">Try it free</div>
-              </div>
-              <div className="px-6 py-3 rounded-lg outline outline-[1.50px] outline-offset-[-1.50px] outline-primary-600 flex justify-center items-center">
-                <div className="justify-start text-primary-600 text-sm font-semibold fontinter leading-tight">Features</div>
-              </div>
+              <Button variant="filled" size="lg">
+                Try it free
+              </Button>
+              <Button variant="outline" size="lg">
+                Features
+              </Button>
             </div>
           </div>
         </div>

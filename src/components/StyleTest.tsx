@@ -1,3 +1,5 @@
+import { Button } from './ui';
+
 export default function StyleTest() {
   return (
     <div className="min-h-screen bg-neutral-50 p-8">
@@ -160,16 +162,16 @@ export default function StyleTest() {
             {/* Button Examples */}
             <div className="p-6 bg-white rounded-lg border border-neutral-200">
               <h3 className="text-lg font-medium text-neutral-700 mb-4 font-source-sans">Botones</h3>
-              <div className="space-y-3">
-                <button className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-inter">
+              <div className="space-y-3 flex flex-col items-start">
+                <Button variant="filled" size="sm">
                   Botón Primario
-                </button>
-                <button className="px-4 py-2 bg-neutral-100 text-neutral-700 rounded-lg hover:bg-neutral-200 transition-colors font-inter">
+                </Button>
+                <Button variant="outline" size="md">
                   Botón Secundario
-                </button>
-                <button className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors font-inter">
-                  Botón Cyan
-                </button>
+                </Button>
+                <Button variant="ghost" size="lg">
+                  Botón Terciario
+                </Button>
               </div>
             </div>
 

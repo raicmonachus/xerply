@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Button } from '../../ui';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
@@ -21,9 +22,9 @@ export default function Hero() {
             <span className="text-neutral-700 text-xl font-medium font-source-sans-pro leading-normal">. Don&apos;t waste another moment—request your free demo today!</span>
           </div>
           <div className="pt-4 flex justify-start items-center gap-4">
-            <div className="px-6 py-3 bg-primary-600 rounded-lg flex justify-center items-center">
-              <div className="justify-start text-white-alpha-10/95 text-sm font-semibold font-inter leading-tight">Request Free Demo</div>
-            </div>
+            <Button variant="filled" size="lg">
+              Request Free Demo
+            </Button>
           </div>
         </div>
         <div className="flex-1 h-[670px] relative">
