@@ -37,8 +37,8 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
           
           {/* Newsletter Section */}
           <div className="w-full lg:w-[500px] flex flex-col justify-start items-start gap-6">
-            <div data-color-scheme="black" className="w-36 h-8 inline-flex justify-start items-center gap-2 cursor-pointer" onClick={() => handleNavigation('home')}>
-              <Image alt="Logo" src="/assets/logo/xerply-logo-bl.svg" width={144} height={32} />
+            <div data-color-scheme="black" className="max-sm:w-full w-36 h-8 max-sm:h-auto inline-flex justify-start max-sm:justify-center items-center gap-2 cursor-pointer" onClick={() => handleNavigation('home')}>
+              <Image alt="Logo" src="/assets/logo/xerply-logo-bl.svg" width={144} height={32} className='max-sm:w-64' />
             </div>
             <div className="self-stretch justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">
               Stay updated with the latest ERP innovations and insights
@@ -52,7 +52,7 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
                     className="flex-1 bg-transparent outline-none text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal placeholder:text-black-alpha-6"
                   />
                 </div>
-                <Button variant="outline" size="md" className="w-full sm:w-auto">
+                <Button variant="outline" size="md" className="w-full sm:w-auto h-[44px]">
                   Subscribe
                 </Button>
               </div>
