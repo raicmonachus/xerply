@@ -1,7 +1,7 @@
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
 
-export type ButtonVariant = 'filled' | 'outline' | 'ghost';
+export type ButtonVariant = 'filled' | 'filled-secondary' | 'outline' | 'ghost';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type IconPosition = 'left' | 'right';
 
@@ -31,6 +31,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({
   // Variantes de estilo
   const variantClasses = {
     filled: "bg-primary-600 text-white-alpha-10/95 hover:bg-primary-700 active:bg-primary-800",
+    'filled-secondary': "bg-primary-50 text-primary-600 hover:bg-primary-100 active:bg-primary-200",
     outline: "outline outline-[1.50px] outline-offset-[-1.50px] outline-primary-600 text-primary-600 bg-transparent hover:bg-primary-50 active:bg-primary-100",
     ghost: "text-primary-600 bg-transparent hover:bg-primary-50 active:bg-primary-100"
   };
