@@ -1,17 +1,18 @@
 import React from 'react';
-import { Button } from '../ui';
+import Image from 'next/image';
+import { Button, AutoCarousel } from '../ui';
+import { BellDot, ChevronRight, Unplug } from 'lucide-react';
 
 export default function Features() {
   return (
     <div className="self-stretch h-auto min-h-screen relative overflow-hidden py-12 md:py-16 lg:py-20">
       {/* Background decorative element */}
       <div className="w-[801.29px] h-[801.29px] left-[-354.38px] top-[-129.99px] absolute origin-top-left rotate-[-15deg] bg-primary-50 rounded-[236.46px]" />
-      
       <div className='h-full flex flex-col justify-center items-center gap-12 md:gap-16 lg:gap-20 px-4 md:px-8 lg:px-16 z-10 relative'>
-        <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20">
+        <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 py-32">
           <div className="w-full max-w-[768px] flex flex-col justify-start items-center gap-6 md:gap-8">
             <div className="self-stretch flex flex-col justify-start items-center gap-3 md:gap-4">
-              <div className="inline-flex justify-start items-center">
+              <div className="flex justify-start items-center">
                 <div className="justify-start text-neutral-800 text-sm md:text-base font-semibold font-source-sans-pro leading-normal">Features</div>
               </div>
               <div className="self-stretch flex flex-col justify-start items-center gap-4 md:gap-6">
@@ -32,6 +33,320 @@ export default function Features() {
               <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 Features
               </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+      { /* Section - Conversational */}
+      <div className="w-full self-stretch px-16 py-28 flex flex-col justify-start items-center gap-20 overflow-hidden">
+        <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
+          <div className="w-[768px] flex flex-col justify-start items-center gap-4">
+            <div className="flex justify-start items-center">
+              <div className="justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">Conversational</div>
+            </div>
+            <div className="self-stretch flex flex-col justify-start items-start gap-6">
+              <div className="self-stretch text-center justify-start"><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]">Chat with your </span><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">data</span></div>
+              <div className="self-stretch text-center justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Interact with your business data through natural language conversations</div>
+            </div>
+          </div>
+          <div className="self-stretch flex flex-col justify-start items-start gap-8">
+            <div className="self-stretch flex justify-start items-start gap-8">
+              <div className="flex-1 h-[640px] bg-neutral-100 rounded-lg outline outline-1 outline-black-alpha-1 flex flex-col md:flex-row justify-center items-center">
+                <div className="flex-1 self-stretch w-full lg:min-w-[640px] flex flex-col justify-center items-center">
+                  <div className="w-[592px] h-[592px] relative">
+                    <Image alt="Patterns" src="/assets/images/ai-business-image.png" width={384} height={592} className="w-80 h-full md:w-96 lg:w-96 relative lg:absolute lg:left-0 lg:top-0 max-sm:-left-8 rounded-lg" />
+                    <div className="w-96 p-4 left-[204.09px] top-[70.21px] absolute bg-white-alpha-5 backdrop-blur-lg rounded-2xl shadow-[8px_8px_24px_0px_rgba(67,67,67,0.05)] flex flex-col justify-start items-center gap-6">
+                      <div className="self-stretch pl-6 flex flex-col justify-start items-start gap-2.5">
+                        <div className="self-stretch min-w-72 p-6 bg-neutral-50 rounded-2xl flex flex-col justify-center items-start gap-6">
+                          <div className="self-stretch flex flex-col justify-start items-start gap-5 overflow-hidden">
+                            <div className="self-stretch flex justify-start items-start gap-3 overflow-hidden">
+                              <Image alt="Icon" src="/assets/images/Avatar.svg" width={40} height={40} className="w-8 h-8 rounded-full" />
+                              <div className="flex-1 justify-start text-primary-600 text-base font-normal font-source-sans-pro leading-normal">Hey, can you check out the latest sales data?</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="self-stretch pr-6 flex flex-col justify-start items-start gap-2.5">
+                        <div className="self-stretch min-w-72 p-6 bg-primary-50 rounded-2xl flex flex-col justify-center items-start gap-6">
+                          <div className="self-stretch flex flex-col justify-start items-start gap-5 overflow-hidden">
+                            <div className="self-stretch flex justify-start items-start gap-3 overflow-hidden">
+                              <div data-show-track="true" data-step="1" data-thickness="4 dp" data-type="Flat" className="w-8 h-8 md:w-10 md:h-10 relative flex-shrink-0">
+                                <Image alt="Icon" src="/assets/icons/xerply-symbol.svg" width={40} height={40} className="w-full h-full" />
+                              </div>
+                              <div className="flex-1 justify-start text-primary-600 text-base font-normal font-source-sans-pro leading-normal">I get it! I’m here to help you. Your data is currently being processed, and the report will be ready in just a moment...</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="self-stretch pl-6 flex flex-col justify-start items-start gap-2.5">
+                        <div className="self-stretch min-w-72 p-6 opacity-50 bg-neutral-50 rounded-2xl flex flex-col justify-center items-start gap-6">
+                          <div className="opacity-50 flex flex-col justify-start items-start gap-5 overflow-hidden">
+                            <div className="flex justify-start items-start gap-3 overflow-hidden">
+                              <div className="w-8 h-8 bg-primary-200 rounded-full" />
+                              <div className="flex flex-col justify-start items-start gap-[4.82px] overflow-hidden">
+                                <div className="w-12 h-3 bg-primary-200 rounded-[40.18px]" />
+                                <div className="flex justify-start items-start gap-[3.21px] overflow-hidden">
+                                  <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-5 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-8 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                                </div>
+                                <div className="flex justify-start items-start gap-[3.21px] overflow-hidden">
+                                  <div className="w-11 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-7 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-14 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-8 h-3 bg-primary-100 rounded-md" />
+                                </div>
+                                <div className="flex justify-start items-start gap-[3.21px] overflow-hidden">
+                                  <div className="w-14 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-12 h-3 bg-primary-100 rounded-md" />
+                                </div>
+                                <div className="flex justify-start items-start gap-[3.21px] overflow-hidden">
+                                  <div className="w-7 h-3 bg-primary-100 rounded-md" />
+                                  <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <AutoCarousel
+                  items={[
+                    // Slide 1
+                    <div key="slide-1" className="flex-1 self-stretch p-12 relative flex flex-col justify-center items-start gap-8">
+                      <div className="self-stretch flex flex-col justify-start items-start gap-2">
+                        <div className="flex justify-start items-center">
+                          <div className="justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">AI</div>
+                        </div>
+                        <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                          <div className="self-stretch justify-start"><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]">Intuitive </span><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">data exploration</span></div>
+                          <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Ask complex questions and receive instant, context-aware insights directly from your enterprise data.</div>
+                        </div>
+                      </div>
+                      <div className="flex justify-start items-center gap-6">
+                        <Button variant="filled" size="lg" className="w-full sm:w-auto">
+                          Explore
+                        </Button>
+                        <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                          Contact us
+                        </Button>
+                      </div>
+                    </div>,
+                    // Slide 2
+                    <div key="slide-2" className="flex-1 self-stretch p-12 relative flex flex-col justify-center items-start gap-8">
+                      <div className="self-stretch flex flex-col justify-start items-start gap-2">
+                        <div className="flex justify-start items-center">
+                          <div className="justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">AI</div>
+                        </div>
+                        <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                          <div className="self-stretch justify-start"><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]">AI agent with contextual </span><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">memory and learning</span></div>
+                          <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Our AI remembers previous interactions to provide more personalized and accurate business recommendations.</div>
+                        </div>
+                      </div>
+                      <div className="flex justify-start items-center gap-6">
+                        <Button variant="filled" size="lg" className="w-full sm:w-auto">
+                          Explore
+                        </Button>
+                        <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                          Contact us
+                        </Button>
+                      </div>
+                    </div>
+                  ]}
+                  interval={5000}
+                  showDots={true}
+                  dotsPosition="custom"
+                  className="flex-1 self-stretch"
+                  dotsClassName="w-28 right-8 top-[607px] absolute flex justify-start items-center gap-4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      { /* Section - Notification */}
+      <div className="self-stretch px-16 py-28 bg-primary-50 inline-flex flex-col justify-start items-center gap-20 overflow-hidden">
+        <div className="w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+          <div className="self-stretch inline-flex justify-start items-center gap-20">
+            <div className="flex-1 inline-flex flex-col justify-start items-start gap-8">
+              <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                <div className="inline-flex justify-start items-center">
+                  <div className="justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">Notification</div>
+                </div>
+                <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                  <div className="self-stretch justify-start"><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">Real-time</span><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]"> smart notifications and insights</span></div>
+                  <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Receive instant alerts and actionable insights to make faster, data-driven business decisions.</div>
+                </div>
+              </div>
+              <div className="inline-flex justify-start items-center gap-6">
+                <Button variant="filled" size="lg" className="w-full sm:w-auto">
+                  Explore
+                </Button>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                  Contact us
+                </Button>
+              </div>
+            </div>
+            <div className="w-[600px] h-[640px] relative flex justify-end items-end">
+              <Image alt="Notifications" src="/assets/images/notification.png" width={480} height={520} className="w-[480px] h-[520px]" />
+              <div className="w-96 min-w-72 p-6 left-0 top-64 absolute opacity-50 bg-neutral-50 rounded-2xl shadow-[0px_16px_40px_-8px_rgba(88,92,95,0.16)] inline-flex flex-col justify-center items-start gap-6">
+                <div className="inline-flex justify-start items-start gap-3 overflow-hidden">
+                  <div className="p-2 bg-primary-200 rounded-[48px] flex justify-start items-center gap-2.5">
+                    <BellDot className="w-6 h-6 relative overflow-hidden" />
+                  </div>
+                  <div className="inline-flex flex-col justify-start items-start gap-[4.82px] overflow-hidden">
+                    <div className="w-12 h-3 bg-primary-200 rounded-[40.18px]" />
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-5 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-8 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-11 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-7 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-14 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-8 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-14 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-12 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-7 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-96 min-w-72 p-6 left-0 top-24 absolute bg-neutral-50 rounded-2xl shadow-[0px_16px_40px_-8px_rgba(88,92,95,0.16)] inline-flex flex-col justify-center items-start gap-6">
+                <div className="inline-flex justify-start items-start gap-3 overflow-hidden">
+                  <div className="p-2 bg-primary-200 rounded-[48px] flex justify-start items-center gap-2.5">
+                    <BellDot className="w-6 h-6 relative overflow-hidden" />
+                  </div>
+                  <div className="inline-flex flex-col justify-start items-start gap-[4.82px] overflow-hidden">
+                    <div className="w-12 h-3 bg-primary-200 rounded-[40.18px]" />
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-5 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-8 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-11 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-7 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-14 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-8 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-14 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-12 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                    <div className="inline-flex justify-start items-start gap-[3.21px] overflow-hidden">
+                      <div className="w-7 h-3 bg-primary-100 rounded-md" />
+                      <div className="w-16 h-3 bg-primary-100 rounded-md" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      { /* Section - Integration */}
+      <div className="self-stretch px-16 py-28 inline-flex flex-col justify-start items-center gap-20 overflow-hidden">
+        <div className="w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
+          <div className="self-stretch inline-flex justify-start items-center gap-20">
+            {/* Imagen y elementos decorativos - Arriba en móvil */}
+            <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center">
+              {/* Main Image */}
+              <Image alt="Integrations" src="/assets/images/young-woman.png" width={320} height={592} className="w-64 h-auto md:w-80 lg:w-80 rounded-lg relative lg:absolute lg:left-56 lg:top-0 max-sm:left-16" />
+              {/* Integration Flow - Vertical in all screen sizes */}
+              <div className="absolute left-0 top-4 md:top-[17.82px] flex flex-col justify-center items-center gap-0.5">
+                {/* Xerply Logo Card */}
+                <div className="w-64 md:w-72 lg:w-80 min-w-0 p-4 md:p-5 lg:p-6 bg-primary-600 rounded-lg md:rounded-xl shadow-lg flex justify-center items-center gap-3 md:gap-5">
+                  <div className="flex-1 flex flex-col justify-center items-center gap-1.5">
+                    <Image alt="Icon" src="/assets/logo/xerply-logo-wh.svg" width={200} height={40} className="w-32 md:w-40 lg:w-[200px] h-auto" />
+                  </div>
+                </div>
+                {/* Connector */}
+                <Image alt="Connector" src="/assets/images/Connector_vertical.png" width={24} height={92} className="w-4 md:w-5 lg:w-6 h-auto" />
+                {/* SAT Card */}
+                <div className="w-64 md:w-72 lg:w-80 min-w-0 p-4 md:p-5 bg-primary-50 rounded-lg md:rounded-xl shadow-lg flex justify-start items-center gap-3 md:gap-5">
+                  <Image alt="Icon" src="/assets/icons/sat.svg" width={56} height={56} className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0" />
+                  <div className="flex-1 flex flex-col justify-start items-start gap-1 md:gap-1.5">
+                    <div className="self-stretch flex flex-col justify-start items-start">
+                      <div className="self-stretch justify-start text-neutral-800 text-[10px] md:text-xs font-semibold font-source-sans-pro leading-tight">Tax administration service</div>
+                    </div>
+                    <div className="self-stretch flex flex-col justify-start items-start overflow-hidden">
+                      <div className="self-stretch justify-start text-neutral-800 text-xl md:text-2xl font-bold font-inter leading-7">SAT</div>
+                    </div>
+                    <div className="self-stretch pt-2 md:pt-4 flex justify-end items-start gap-[3.06px]">
+                      <div className="flex flex-col justify-start items-start">
+                        <div className="self-stretch justify-start text-neutral-800 text-[8px] md:text-[9px] font-medium font-inter leading-[10px]">Configuring connection...</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Connector */}
+                <Image alt="Connector" src="/assets/images/Connector_vertical.png" width={24} height={92} className="w-4 md:w-5 lg:w-6 h-auto" />
+                {/* Bank Selection Card */}
+                <div className="w-64 md:w-72 lg:w-80 min-w-0 p-4 md:p-5 bg-neutral-50 rounded-lg md:rounded-xl shadow-lg flex justify-start items-center gap-3 md:gap-5">
+                  <div className="flex-1 flex flex-col justify-start items-start gap-1.5">
+                    <div className="self-stretch flex flex-col justify-start items-start">
+                      <div className="self-stretch justify-start text-neutral-800 text-xs font-semibold font-source-sans-pro leading-tight">Financial</div>
+                    </div>
+                    <div className="flex flex-col justify-start items-start">
+                      <div className="self-stretch justify-start text-primary-600 text-sm font-semibold font-source-sans-pro leading-tight">Choose one entity:</div>
+                    </div>
+                    <div className="flex justify-start items-center gap-2">
+                      <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                        <Image alt="Icon" src="/assets/icons/HSBC.svg" width={60} height={17} />
+                      </div>
+                      <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                        <Image alt="Icon" src="/assets/icons/Citi.svg" width={24} height={17} />
+                      </div>
+                      <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                        <Image alt="Icon" src="/assets/icons/BBVA_2019.svg" width={60} height={17} />
+                      </div>
+                      <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
+                        <Image alt="Icon" src="/assets/icons/Citibanamex.svg" width={20} height={20} />
+                      </div>
+                    </div>
+                    <div className="self-stretch pt-4 flex justify-end items-start gap-[3.06px]">
+                      <div className="flex flex-col justify-start items-start">
+                        <div className="self-stretch justify-start text-neutral-800 text-[9px] font-medium font-inter leading-[10px]">Configuring connection...</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1 inline-flex flex-col justify-start items-start gap-8">
+              <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                <Unplug className="w-16 h-16 text-cyan-500" />
+                <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                  <div className="self-stretch justify-start"><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]">Seamless software and platform </span><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">integrations</span></div>
+                  <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Connect Xerply ERP with your existing tools to create a unified business ecosystem.</div>
+                </div>
+              </div>
+              <div className="inline-flex justify-start items-center gap-6">
+                <Button variant="filled" size="lg" className="w-full sm:w-auto">
+                  View integrations
+                </Button>
+                <Button variant="ghost" size="lg" icon={ChevronRight} iconPosition="right" className="w-full sm:w-auto">
+                  Contact us
+                </Button>
+              </div>
             </div>
           </div>
         </div>
