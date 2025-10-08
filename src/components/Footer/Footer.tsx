@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '../ui';
 
@@ -38,7 +37,7 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
           {/* Newsletter Section */}
           <div className="w-full lg:w-[500px] flex flex-col justify-start items-start gap-6">
             <div data-color-scheme="black" className="max-sm:w-full w-36 h-8 max-sm:h-auto inline-flex justify-start max-sm:justify-center items-center gap-2 cursor-pointer" onClick={() => handleNavigation('home')}>
-              <Image alt="Logo" src="/assets/logo/xerply-logo-bl.svg" width={144} height={32} className='max-sm:w-64' />
+              <img alt="Logo" src="/assets/logo/xerply-logo-bl.svg" className='max-sm:w-64' />
             </div>
             <div className="self-stretch justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">
               Stay updated with the latest ERP innovations and insights
@@ -113,23 +112,23 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
               <div className="self-stretch justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">Follow us</div>
               <div className="self-stretch flex flex-col justify-start items-start">
                 <a href="#" className="self-stretch py-2 inline-flex justify-start items-center gap-3 cursor-pointer transition-colors hover:text-primary-600">
-                  <Image alt="Facebook" src="/assets/icons/Facebook.svg" width={24} height={24} />
+                  <img alt="Facebook" src="/assets/icons/Facebook.svg" />
                   <div className="justify-start text-neutral-800 text-sm font-normal font-source-sans-pro leading-tight">Facebook</div>
                 </a>
                 <a href="#" className="self-stretch py-2 inline-flex justify-start items-center gap-3 cursor-pointer transition-colors hover:text-primary-600">
-                  <Image alt="Instagram" src="/assets/icons/Instagram.svg" width={24} height={24} />
+                  <img alt="Instagram" src="/assets/icons/Instagram.svg" />
                   <div className="justify-start text-neutral-800 text-sm font-normal font-source-sans-pro leading-tight">Instagram</div>
                 </a>
                 <a href="#" className="self-stretch py-2 inline-flex justify-start items-center gap-3 cursor-pointer transition-colors hover:text-primary-600">
-                  <Image alt="X" src="/assets/icons/X.svg" width={24} height={24} />
+                  <img alt="X" src="/assets/icons/X.svg" />
                   <div className="justify-start text-neutral-800 text-sm font-normal font-source-sans-pro leading-tight">X</div>
                 </a>
                 <a href="#" className="self-stretch py-2 inline-flex justify-start items-center gap-3 cursor-pointer transition-colors hover:text-primary-600">
-                  <Image alt="LinkedIn" src="/assets/icons/LinkedIn.svg" width={24} height={24} />
+                  <img alt="LinkedIn" src="/assets/icons/LinkedIn.svg" />
                   <div className="justify-start text-neutral-800 text-sm font-normal font-source-sans-pro leading-tight">LinkedIn</div>
                 </a>
                 <a href="#" className="self-stretch py-2 inline-flex justify-start items-center gap-3 cursor-pointer transition-colors hover:text-primary-600">
-                  <Image alt="YouTube" src="/assets/icons/YouTube.svg" width={24} height={24} />
+                  <img alt="YouTube" src="/assets/icons/YouTube.svg" />
                   <div className="justify-start text-neutral-800 text-sm font-normal font-source-sans-pro leading-tight">YouTube</div>
                 </a>
               </div>
@@ -210,23 +209,23 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
               <div className={`overflow-hidden transition-all duration-300 ${openAccordion === 'follow' ? 'max-h-96 mb-4' : 'max-h-0'}`}>
                 <div className="flex flex-col gap-3">
                   <a href="#" className="py-2 flex items-center gap-3">
-                    <Image alt="Facebook" src="/assets/icons/Facebook.svg" width={24} height={24} />
+                    <img alt="Facebook" src="/assets/icons/Facebook.svg" />
                     <div className="text-neutral-800 text-sm font-normal font-source-sans-pro">Facebook</div>
                   </a>
                   <a href="#" className="py-2 flex items-center gap-3">
-                    <Image alt="Instagram" src="/assets/icons/Instagram.svg" width={24} height={24} />
+                    <img alt="Instagram" src="/assets/icons/Instagram.svg" />
                     <div className="text-neutral-800 text-sm font-normal font-source-sans-pro">Instagram</div>
                   </a>
                   <a href="#" className="py-2 flex items-center gap-3">
-                    <Image alt="X" src="/assets/icons/X.svg" width={24} height={24} />
+                    <img alt="X" src="/assets/icons/X.svg" />
                     <div className="text-neutral-800 text-sm font-normal font-source-sans-pro">X</div>
                   </a>
                   <a href="#" className="py-2 flex items-center gap-3">
-                    <Image alt="LinkedIn" src="/assets/icons/LinkedIn.svg" width={24} height={24} />
+                    <img alt="LinkedIn" src="/assets/icons/LinkedIn.svg" />
                     <div className="text-neutral-800 text-sm font-normal font-source-sans-pro">LinkedIn</div>
                   </a>
                   <a href="#" className="py-2 flex items-center gap-3">
-                    <Image alt="YouTube" src="/assets/icons/YouTube.svg" width={24} height={24} />
+                    <img alt="YouTube" src="/assets/icons/YouTube.svg" />
                     <div className="text-neutral-800 text-sm font-normal font-source-sans-pro">YouTube</div>
                   </a>
                 </div>

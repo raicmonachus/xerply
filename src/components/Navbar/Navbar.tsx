@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../ui';
 
@@ -40,7 +39,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
           
           {/* Logo */}
           <div className="flex justify-center items-center gap-1 cursor-pointer" onClick={() => handleNavigation('home')}>
-            <Image alt="Logo" src="/assets/logo/xerply-logo.svg" width={120} height={28} className="md:w-[140px] md:h-[32px]" />
+            <img alt="Logo" src="/assets/logo/xerply-logo.svg" className="w-[120px] h-[28px] md:w-[140px] md:h-[32px]" />
           </div>
 
           {/* Desktop Navigation */}

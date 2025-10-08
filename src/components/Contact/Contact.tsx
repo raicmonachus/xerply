@@ -1,7 +1,5 @@
-'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { Button, Input, Select, RadioGroup, Textarea, Checkbox } from '../ui';
 import type { SelectOption } from '../ui/Select/Select';
 import type { RadioOption } from '../ui/RadioGroup/RadioGroup';
@@ -206,13 +204,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <Image
-          alt="Decorative Element"
-          src="/assets/images/confident-image.png"
-          width={940}
-          height={700}
-          className="rounded-tl-[40px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[40px] z-10"
-        />
+        <img alt="Decorative Element" src="/assets/images/confident-image.png" className="rounded-tl-[40px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[40px] z-10" />
       </div>
     </div>
   );

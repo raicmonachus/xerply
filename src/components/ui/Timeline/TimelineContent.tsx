@@ -1,7 +1,4 @@
-'use client';
 
-import React from 'react';
-import Image from 'next/image';
 import { TimelineItem } from './types';
 
 interface TimelineContentProps {
@@ -53,28 +50,14 @@ export default function TimelineContent({
             
             {/* Image on Right */}
             <div className="flex-1 self-stretch relative min-h-[300px] lg:min-h-[400px]">
-              <Image 
-                className="w-full h-full object-cover rounded-2xl" 
-                src={item.image} 
-                width={720} 
-                height={720} 
-                alt={item.imageAlt || `${item.year} - ${item.title}`}
-                priority={index === 0}
-              />
+              <img className="w-full h-full object-cover rounded-2xl" src={item.image} alt={item.imageAlt || `${item.year} - ${item.title}`} />
             </div>
           </>
         ) : (
           <>
             {/* Image on Left */}
             <div className="flex-1 self-stretch relative min-h-[300px] lg:min-h-[400px]">
-              <Image 
-                className="w-full h-full object-cover rounded-2xl" 
-                src={item.image} 
-                width={720} 
-                height={720} 
-                alt={item.imageAlt || `${item.year} - ${item.title}`}
-                priority={index === 0}
-              />
+              <img className="w-full h-full object-cover rounded-2xl" src={item.image} alt={item.imageAlt || `${item.year} - ${item.title}`} />
             </div>
             
             {/* Content on Right */}
@@ -101,14 +84,7 @@ export default function TimelineContent({
       <div className="md:hidden flex flex-col justify-start items-start gap-6">
         {/* Image First */}
         <div className="w-full relative min-h-[200px]">
-          <Image 
-            className="w-full h-full object-cover rounded-xl" 
-            src={item.image} 
-            width={720} 
-            height={720} 
-            alt={item.imageAlt || `${item.year} - ${item.title}`}
-            priority={index === 0}
-          />
+          <img className="w-full h-full object-cover rounded-xl" src={item.image} alt={item.imageAlt || `${item.year} - ${item.title}`} />
         </div>
         
         {/* Content Below */}

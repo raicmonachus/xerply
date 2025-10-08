@@ -1,7 +1,5 @@
-'use client';
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface TeamMember {
@@ -40,13 +38,7 @@ export default function TeamCarousel({ members, className = '' }: TeamCarouselPr
       <div className="lg:hidden w-full relative">
         {/* Team Member Card */}
         <div className="flex-1 flex flex-col justify-start items-center gap-6 overflow-hidden px-4 md:px-8">
-          <Image 
-            width={80} 
-            height={80} 
-            src={members[currentIndex].image || "/assets/images/placeholder/Placeholder_Image_80x80.svg"} 
-            alt={`${members[currentIndex].name} Avatar`}
-            className="rounded-full"
-          />
+          <img src={members[currentIndex].image || "/assets/images/placeholder/Placeholder_Image_80x80.svg"} alt={`${members[currentIndex].name} Avatar`} className="rounded-full" />
           <div className="self-stretch flex flex-col justify-start items-center gap-4">
             <div className="self-stretch flex flex-col justify-start items-center">
               <div className="self-stretch text-center justify-start text-neutral-800 text-xl font-semibold font-inter leading-normal">
@@ -63,20 +55,10 @@ export default function TeamCarousel({ members, className = '' }: TeamCarouselPr
           {/* Social Links */}
           <div className="flex justify-center items-center gap-3.5">
             {members[currentIndex].linkedIn && (
-              <Image 
-                alt="LinkedIn" 
-                src="/assets/icons/LinkedIn.svg" 
-                width={24} 
-                height={24} 
-              />
+              <img alt="LinkedIn" src="/assets/icons/LinkedIn.svg" />
             )}
             {members[currentIndex].twitter && (
-              <Image 
-                alt="X" 
-                src="/assets/icons/X.svg" 
-                width={24} 
-                height={24} 
-              />
+              <img alt="X" src="/assets/icons/X.svg" />
             )}
           </div>
         </div>
@@ -118,13 +100,7 @@ export default function TeamCarousel({ members, className = '' }: TeamCarouselPr
       <div className="hidden lg:flex self-stretch justify-start items-start gap-12">
         {members.map((member) => (
           <div key={member.id} className="flex-1 flex flex-col justify-start items-center gap-6">
-            <Image 
-              width={80} 
-              height={80} 
-              src={member.image || "/assets/images/placeholder/Placeholder_Image_80x80.svg"} 
-              alt={`${member.name} Avatar`}
-              className="rounded-full"
-            />
+            <img src={member.image || "/assets/images/placeholder/Placeholder_Image_80x80.svg"} alt={`${member.name} Avatar`} className="rounded-full" />
             <div className="self-stretch flex flex-col justify-start items-center gap-4">
               <div className="self-stretch flex flex-col justify-start items-center">
                 <div className="self-stretch text-center justify-start text-neutral-800 text-xl font-semibold font-inter leading-normal">
@@ -141,20 +117,10 @@ export default function TeamCarousel({ members, className = '' }: TeamCarouselPr
             {/* Social Links */}
             <div className="flex justify-center items-center gap-3.5">
               {member.linkedIn && (
-                <Image 
-                  alt="LinkedIn" 
-                  src="/assets/icons/LinkedIn.svg" 
-                  width={24} 
-                  height={24} 
-                />
+                <img alt="LinkedIn" src="/assets/icons/LinkedIn.svg" />
               )}
               {member.twitter && (
-                <Image 
-                  alt="X" 
-                  src="/assets/icons/X.svg" 
-                  width={24} 
-                  height={24} 
-                />
+                <img alt="X" src="/assets/icons/X.svg" />
               )}
             </div>
           </div>

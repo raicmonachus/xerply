@@ -1,6 +1,5 @@
-'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { TimelineProps } from './types';
 import TimelineNavigator from './TimelineNavigator';
 import TimelineContent from './TimelineContent';

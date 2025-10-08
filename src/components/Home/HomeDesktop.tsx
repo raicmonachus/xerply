@@ -1,5 +1,3 @@
-import React from 'react';
-import Image from 'next/image';
 import Hero from './Hero';
 import { ChevronRight, CircleCheckBig, DatabaseBackup } from 'lucide-react';
 import { Button } from '../ui';
@@ -15,11 +13,11 @@ export default function HomeDesktop() {
           <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24">
             {/* Imagen y elementos decorativos - Arriba en móvil */}
             <div className="image-wrapper w-full lg:flex-1 min-h-[400px] md:min-h-[500px] lg:h-[630.57px] relative flex justify-center items-center order-1 lg:order-2">
-              <Image alt="Autonomus" src="/assets/images/automation.png" width={592} height={592} className="w-full max-w-[300px] md:max-w-md lg:max-w-full h-auto max-sm:-ml-24 rounded-tl-[128px] md:rounded-tl-[256px] rounded-tr-[32px] md:rounded-tr-[64px] rounded-bl-[32px] md:rounded-bl-[64px] rounded-br-[64px] md:rounded-br-[128px] transform scale-x-[-1]" />
+              <img alt="Autonomus" src="/assets/images/automation.png" className="w-full max-w-[300px] md:max-w-md lg:max-w-full h-auto max-sm:-ml-24 rounded-tl-[128px] md:rounded-tl-[256px] rounded-tr-[32px] md:rounded-tr-[64px] rounded-bl-[32px] md:rounded-bl-[64px] rounded-br-[64px] md:rounded-br-[128px] transform scale-x-[-1]" />
               <div className="w-full max-w-xs md:max-w-sm lg:w-96 p-3 md:p-4 absolute max-sm:-mr-16 top-[-20px] md:top-[-32px] lg:left-[222px] lg:-top-8 bg-white-alpha-5 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg flex flex-col justify-start items-center gap-4 md:gap-6">
                 <div className="self-stretch min-w-0 px-4 md:px-6 py-2 md:py-3 bg-primary-50 rounded-xl md:rounded-2xl flex justify-start items-center gap-3 md:gap-6">
                   <div data-show-track="true" data-step="1" data-thickness="4 dp" data-type="Flat" className="w-8 h-8 md:w-10 md:h-10 relative flex-shrink-0">
-                    <Image alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" width={40} height={40} className="w-full h-full" />
+                    <img alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" className="w-full h-full" />
                   </div>
                   <div className="flex-1 justify-start text-primary-600 text-xs md:text-sm lg:text-base font-normal font-source-sans-pro leading-snug md:leading-normal">I see you! I&apos;m reviewing your tasks and adjusting the dashboard accordingly. Hang tight while your data is processed...</div>
                 </div>
@@ -124,7 +122,7 @@ export default function HomeDesktop() {
           {/* Imagen y elementos decorativos - Arriba en móvil */}
           <div className="image-wrapper w-full lg:flex-1 min-h-[400px] md:min-h-[500px] lg:h-[600px] relative flex items-center justify-center order-1">
             <div className='w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rotate-[15deg] rounded-tl-[32px] md:rounded-tl-[45.82px] rounded-tr-[64px] md:rounded-tr-[91.64px] rounded-bl-[64px] md:rounded-bl-[91.64px] rounded-br-[32px] md:rounded-br-[45.82px] overflow-hidden'>
-              <Image alt="Flexible" src="/assets/images/flexible.png" width={592} height={592} className="scale-125 -rotate-[15deg] object-cover w-full h-full" />
+              <img alt="Flexible" src="/assets/images/flexible.png" className="scale-125 -rotate-[15deg] object-cover w-full h-full" />
             </div>
             {/* Cash Risk Card */}
             <div className="w-52 md:w-64 min-w-0 p-2.5 md:p-3.5 absolute left-0 top-0 bg-neutral-50 rounded-lg md:rounded-[9.82px] shadow-lg flex flex-col justify-start items-start gap-2 md:gap-[4.91px]">
@@ -138,7 +136,7 @@ export default function HomeDesktop() {
               </div>
               <div className="self-stretch h-40 min-h-28 py-2.5 flex flex-col justify-center items-center gap-2">
                 <div className='w-56 h-[90px] overflow-hidden flex items-center justify-center'>
-                  <Image alt="Icon" src="/assets/images/risk-chart.png" width={180} height={180} />
+                  <img alt="Icon" src="/assets/images/risk-chart.png" />
                 </div>
                 <div className="w-20 pl-5 flex justify-between items-start">
                   <div className="flex flex-col justify-start items-start">
@@ -155,11 +153,11 @@ export default function HomeDesktop() {
             </div>
             {/* AI Prompt Bubble */}
             <div className="w-64 md:w-80 min-w-0 p-4 md:p-5 right-0 bottom-0 lg:left-[283px] lg:top-[499.90px] lg:right-auto lg:bottom-auto absolute bg-primary-50 rounded-lg md:rounded-xl shadow-lg flex justify-start items-start gap-3 md:gap-5">
-              <Image alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
+              <img alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
               <div className="flex-1 justify-start text-primary-600 text-sm md:text-base font-normal font-source-sans-pro leading-normal">Show me cash risk by customer, not by supplier.</div>
             </div>
             {/* Connector - Hidden on mobile */}
-            <Image alt="Icon" src="/assets/images/Connector.png" width={200} height={400} className="hidden lg:block left-24 top-[210px] absolute" />
+            <img alt="Icon" src="/assets/images/Connector.png" className="hidden lg:block left-24 top-[210px] absolute" />
           </div>
           {/* Texto - Abajo en móvil */}
           <div className="w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
@@ -211,9 +209,9 @@ export default function HomeDesktop() {
           {/* Imagen y elementos decorativos - Abajo en móvil */}
           <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
             {/* Pattern SVG */}
-            <Image alt="Icon" src="/assets/images/Patterns_1.svg" width={224} height={288} className="w-40 h-52 md:w-48 md:h-60 lg:w-56 lg:h-72 absolute top-[-120px] right-0 max-sm:top-16 md:top-[-180px] lg:left-[260px] lg:top-[-278px] lg:right-auto" />
+            <img alt="Icon" src="/assets/images/Patterns_1.svg" className="w-40 h-52 md:w-48 md:h-60 lg:w-56 lg:h-72 absolute top-[-120px] right-0 max-sm:top-16 md:top-[-180px] lg:left-[260px] lg:top-[-278px] lg:right-auto" />
             {/* Main Image */}
-            <Image alt="Potential" src="/assets/images/business-potential-image.png" width={469} height={469} className="w-80 h-80 md:w-96 md:h-96 lg:w-[469px] lg:h-[469px] relative lg:absolute lg:left-24 lg:top-0 max-sm:top-16 max-sm:-right-8 rounded-tl-[40px] rounded-tr-[80px] rounded-bl-[160px] rounded-br-[40px] md:rounded-tl-[50.66px] md:rounded-tr-[101.33px] md:rounded-bl-[202.65px] md:rounded-br-[50.66px]" />
+            <img alt="Potential" src="/assets/images/business-potential-image.png" className="w-80 h-80 md:w-96 md:h-96 lg:w-[469px] lg:h-[469px] relative lg:absolute lg:left-24 lg:top-0 max-sm:top-16 max-sm:-right-8 rounded-tl-[40px] rounded-tr-[80px] rounded-bl-[160px] rounded-br-[40px] md:rounded-tl-[50.66px] md:rounded-tr-[101.33px] md:rounded-bl-[202.65px] md:rounded-br-[50.66px]" />
             {/* Skeleton Chat Card */}
             <div className="w-full max-w-xs md:max-w-sm lg:w-96 min-w-0 p-4 md:p-6 absolute bottom-0 right-0 lg:left-[216px] lg:top-[423.48px] lg:right-auto lg:bottom-auto bg-neutral-50 rounded-xl md:rounded-2xl shadow-lg hidden lg:flex flex-col justify-center items-start gap-4 md:gap-6">
               <div className="flex flex-col justify-start items-start gap-5 overflow-hidden">
@@ -250,7 +248,7 @@ export default function HomeDesktop() {
             {/* Chat Notifications Card */}
             <div className="w-full max-w-xs md:max-w-sm lg:w-96 p-3 md:p-4 absolute left-0 top-[-60px] md:top-[-80px] lg:left-[-81.16px] lg:-top-[84px] bg-white-alpha-5 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg flex flex-col justify-start items-center gap-4 md:gap-6">
               <div className="self-stretch min-w-0 px-4 md:px-6 py-2 md:py-3 bg-primary-50 rounded-xl md:rounded-2xl flex justify-start items-center gap-3 md:gap-6">
-                <Image alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
+                <img alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
                 <div className="flex-1 justify-start text-primary-600 text-sm md:text-base font-normal font-source-sans-pro leading-normal">Your sales grew 12% this month, but the average ticket fell 8%. Launch an upselling promotion this week to recover the margin.</div>
               </div>
               <div className="self-stretch min-w-0 px-4 md:px-6 py-2 md:py-3 bg-primary-50 rounded-xl md:rounded-2xl flex justify-start items-center gap-3 md:gap-6">
@@ -263,7 +261,7 @@ export default function HomeDesktop() {
               </div>
             </div>
             {/* Connector - Hidden on mobile */}
-            <Image alt="Connector" src="/assets/images/Connector_sm.png" width={128} height={112} className="hidden lg:block absolute left-24 top-[373.33px]" />
+            <img alt="Connector" src="/assets/images/Connector_sm.png" className="hidden lg:block absolute left-24 top-[373.33px]" />
             {/* Database Icon Card */}
             <div className="hidden w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 p-2.5 md:p-3 lg:p-3.5 absolute left-2 bottom-2 md:left-4 md:bottom-4 lg:left-[49.64px] lg:top-[429.49px] lg:bottom-auto bg-violet-200 rounded-full lg:flex justify-center items-center gap-2">
               <DatabaseBackup width={56} height={56} className='text-primary-600' />
@@ -274,22 +272,22 @@ export default function HomeDesktop() {
         <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24 relative">
           {/* Imagen y elementos decorativos - Arriba en móvil */}
           <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
-            <Image alt="Patterns" src="/assets/images/ai-business-image.png" width={384} height={592} className="w-80 h-auto md:w-96 lg:w-96 relative lg:absolute lg:left-0 lg:top-0 max-sm:-left-8 rounded-lg" />
+            <img alt="Patterns" src="/assets/images/ai-business-image.png" className="w-80 h-auto md:w-96 lg:w-96 relative lg:absolute lg:left-0 lg:top-0 max-sm:-left-8 rounded-lg" />
             {/* AI Chat Interface Card */}
             <div className="w-full max-w-xs md:max-w-sm lg:w-96 p-3 md:p-4 absolute right-0 top-8 md:top-12 lg:left-[204.09px] lg:top-[81px] max-sm:left-18 max-sm:top-48 lg:right-auto bg-white-alpha-5 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg flex flex-col justify-start items-center gap-4 md:gap-6">
               <div className="self-stretch min-w-0 px-4 md:px-6 py-2 md:py-3 bg-neutral-50 rounded-xl md:rounded-2xl flex justify-start items-start gap-3 md:gap-6">
-                <Image alt="Avatar" src="/assets/images/Avatar.svg" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
+                <img alt="Avatar" src="/assets/images/Avatar.svg" className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
                 <div className="flex-1 flex flex-col justify-center items-start gap-1">
                   <div className="self-stretch justify-start text-primary-600 text-[8px] md:text-[9px] font-bold font-inter leading-[10px]">User</div>
                   <div className="self-stretch justify-start text-primary-600 text-sm md:text-base font-normal font-source-sans-pro leading-normal">Where did this month&apos;s growth come from? </div>
                 </div>
               </div>
               <div className="self-stretch min-w-0 px-4 md:px-6 py-2 md:py-3 bg-primary-50 rounded-xl md:rounded-2xl flex justify-start items-start gap-3 md:gap-6">
-                <Image alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
+                <img alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
                 <div className="flex-1 justify-start text-primary-600 text-sm md:text-base font-normal font-source-sans-pro leading-normal">I get it! I&apos;m here to help you understand your business better. Your data is currently being processed, and the report will be ready in just a moment...</div>
               </div>
               <div className="self-stretch min-w-0 px-4 md:px-6 py-2 md:py-3 bg-primary-50 rounded-xl md:rounded-2xl flex justify-start items-start gap-3 md:gap-6">
-                <Image alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
+                <img alt="Icon" src="/assets/icons/Circular-indeterminate-progress-indicator.svg" className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0" />
                 <div className="flex-1 justify-start text-primary-600 text-sm md:text-base font-normal font-source-sans-pro leading-normal">Product A generated 65%. If you promote cross-selling with product B, you can increase sales by an additional 12%.</div>
               </div>
             </div>
@@ -321,7 +319,7 @@ export default function HomeDesktop() {
               </Button>
             </div>
           </div>
-          <Image alt="Patterns" src="/assets/images/Patterns_3.svg" width={640} height={120} className="-right-8 -bottom-16 absolute" />
+          <img alt="Patterns" src="/assets/images/Patterns_3.svg" className="-right-8 -bottom-16 absolute" />
         </div>
         { /* Value prop section - Affordable */}
         <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 relative flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24">
@@ -350,9 +348,9 @@ export default function HomeDesktop() {
           {/* Imagen y elementos decorativos - Abajo en móvil */}
           <div className="image-wrapper w-full lg:flex-1 min-h-[550px] md:min-h-[600px] lg:h-[656px] relative flex items-center justify-center order-1 lg:order-2">
             {/* Pattern SVG */}
-            <Image alt="Patterns" src="/assets/images/Patterns_4.svg" width={208} height={320} className="hidden lg:block absolute left-12 top-[480px]" />
+            <img alt="Patterns" src="/assets/images/Patterns_4.svg" className="hidden lg:block absolute left-12 top-[480px]" />
             {/* Main Image */}
-            <Image alt="Affordable" src="/assets/images/budget-image.png" width={320} height={320} className="w-64 h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 rounded-2xl md:rounded-[32px] relative lg:absolute lg:left-0 lg:top-[168px] max-sm:-left-16 max-sm:transform max-sm:scale-x-[-1]" />
+            <img alt="Affordable" src="/assets/images/budget-image.png" className="w-64 h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 rounded-2xl md:rounded-[32px] relative lg:absolute lg:left-0 lg:top-[168px] max-sm:-left-16 max-sm:transform max-sm:scale-x-[-1]" />
             
             {/* Mobile/Tablet: Grid Layout */}
             <div className="absolute grid grid-cols-1 gap-4 mt-6 lg:hidden w-full max-w-56 md:max-w-md max-sm:scale-90 max-sm:-right-4">
@@ -441,20 +439,20 @@ export default function HomeDesktop() {
           {/* Imagen y elementos decorativos - Arriba en móvil */}
           <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
             {/* Main Image */}
-            <Image alt="Integrations" src="/assets/images/young-woman.png" width={320} height={592} className="w-64 h-auto md:w-80 lg:w-80 rounded-lg relative lg:absolute lg:left-56 lg:top-0 max-sm:left-16" />
+            <img alt="Integrations" src="/assets/images/young-woman.png" className="w-64 h-auto md:w-80 lg:w-80 rounded-lg relative lg:absolute lg:left-56 lg:top-0 max-sm:left-16" />
             {/* Integration Flow - Vertical in all screen sizes */}
             <div className="absolute left-0 top-4 md:top-[17.82px] flex flex-col justify-center items-center gap-0.5">
               {/* Xerply Logo Card */}
               <div className="w-64 md:w-72 lg:w-80 min-w-0 p-4 md:p-5 lg:p-6 bg-primary-600 rounded-lg md:rounded-xl shadow-lg flex justify-center items-center gap-3 md:gap-5">
                 <div className="flex-1 flex flex-col justify-center items-center gap-1.5">
-                  <Image alt="Icon" src="/assets/logo/xerply-logo-wh.svg" width={200} height={40} className="w-32 md:w-40 lg:w-[200px] h-auto" />
+                  <img alt="Icon" src="/assets/logo/xerply-logo-wh.svg" className="w-32 md:w-40 lg:w-[200px] h-auto" />
                 </div>
               </div>
               {/* Connector */}
-              <Image alt="Connector" src="/assets/images/Connector_vertical.png" width={24} height={92} className="w-4 md:w-5 lg:w-6 h-auto" />
+              <img alt="Connector" src="/assets/images/Connector_vertical.png" className="w-4 md:w-5 lg:w-6 h-auto" />
               {/* SAT Card */}
               <div className="w-64 md:w-72 lg:w-80 min-w-0 p-4 md:p-5 bg-primary-50 rounded-lg md:rounded-xl shadow-lg flex justify-start items-center gap-3 md:gap-5">
-                <Image alt="Icon" src="/assets/icons/sat.svg" width={56} height={56} className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0" />
+                <img alt="Icon" src="/assets/icons/sat.svg" className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0" />
                 <div className="flex-1 flex flex-col justify-start items-start gap-1 md:gap-1.5">
                   <div className="self-stretch flex flex-col justify-start items-start">
                     <div className="self-stretch justify-start text-neutral-800 text-[10px] md:text-xs font-semibold font-source-sans-pro leading-tight">Tax administration service</div>
@@ -470,7 +468,7 @@ export default function HomeDesktop() {
                 </div>
               </div>
               {/* Connector */}
-              <Image alt="Connector" src="/assets/images/Connector_vertical.png" width={24} height={92} className="w-4 md:w-5 lg:w-6 h-auto" />
+              <img alt="Connector" src="/assets/images/Connector_vertical.png" className="w-4 md:w-5 lg:w-6 h-auto" />
               {/* Bank Selection Card */}
               <div className="w-64 md:w-72 lg:w-80 min-w-0 p-4 md:p-5 bg-neutral-50 rounded-lg md:rounded-xl shadow-lg flex justify-start items-center gap-3 md:gap-5">
                 <div className="flex-1 flex flex-col justify-start items-start gap-1.5">
@@ -482,16 +480,16 @@ export default function HomeDesktop() {
                   </div>
                   <div className="flex justify-start items-center gap-2">
                     <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
-                      <Image alt="Icon" src="/assets/icons/HSBC.svg" width={60} height={17} />
+                      <img alt="Icon" src="/assets/icons/HSBC.svg" />
                     </div>
                     <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
-                      <Image alt="Icon" src="/assets/icons/Citi.svg" width={24} height={17} />
+                      <img alt="Icon" src="/assets/icons/Citi.svg" />
                     </div>
                     <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
-                      <Image alt="Icon" src="/assets/icons/BBVA_2019.svg" width={60} height={17} />
+                      <img alt="Icon" src="/assets/icons/BBVA_2019.svg" />
                     </div>
                     <div className="p-3 bg-primary-50 rounded-md flex justify-start items-center gap-2">
-                      <Image alt="Icon" src="/assets/icons/Citibanamex.svg" width={20} height={20} />
+                      <img alt="Icon" src="/assets/icons/Citibanamex.svg" />
                     </div>
                   </div>
                   <div className="self-stretch pt-4 flex justify-end items-start gap-[3.06px]">
@@ -552,7 +550,7 @@ export default function HomeDesktop() {
               </div>
             </div>
           </div>
-          <Image alt="Business" src="/assets/images/owners-image.png" width={940} height={600} className='z-10 w-full max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[940px] h-auto' />
+          <img alt="Business" src="/assets/images/owners-image.png" className='z-10 w-full max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[940px] h-auto' />
         </div>
       </main>
     </>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, ToggleSwitch, PricingComparisonTable } from '../ui';
 
 export default function Pricing() {

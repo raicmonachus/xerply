@@ -1,6 +1,5 @@
-'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Check, Infinity } from 'lucide-react';
 import Button from '../Button';
 

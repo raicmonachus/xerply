@@ -1,5 +1,3 @@
-import React from 'react';
-import Image from 'next/image';
 import { Button, Timeline, TeamCarousel } from '../ui';
 import type { TimelineItem } from '../ui/Timeline/types';
 import type { TeamMember } from '../ui/TeamCarousel/TeamCarousel';
@@ -121,7 +119,7 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-          <Image className="flex-1 self-stretch w-full max-w-full" src="/assets/images/placeholder/Placeholder_Image.png" width={720} height={720} alt="About Us Image" />
+          <img className="flex-1 self-stretch w-full max-w-full" src="/assets/images/placeholder/Placeholder_Image.png" alt="About Us Image" />
         </div>
       </div>
       { /* Section - Our Team */}
@@ -191,7 +189,7 @@ export default function AboutUs() {
       { /* Section - Impact */}
       <div className="self-stretch bg-neutral-200 flex flex-col justify-start items-center gap-20 overflow-hidden">
         <div className="self-stretch flex justify-start items-start">
-          <Image className="flex-1 self-stretch w-full max-w-full" src="/assets/images/placeholder/Placeholder_Image.png" width={720} height={720} alt="About Us Image" />
+          <img className="flex-1 self-stretch w-full max-w-full" src="/assets/images/placeholder/Placeholder_Image.png" alt="About Us Image" />
           <div className="flex-1 self-stretch pl-20 pr-16 py-28 flex flex-col justify-center items-start gap-8">
             <div className="w-full max-w-[560px] flex flex-col justify-start items-start gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-8">
@@ -205,7 +203,7 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div className="self-stretch py-2 flex justify-start items-start gap-8 flex-wrap content-start">
-                  <Image className="w-32 h-12" src="/assets/logo/xerply-logo-bl.svg" width={128} height={48} alt="Client Logo" />
+                  <img className="w-32 h-12" src="/assets/logo/xerply-logo-bl.svg" alt="Client Logo" />
                 </div>
               </div>
               <div className="flex justify-start items-center gap-6">

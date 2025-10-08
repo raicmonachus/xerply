@@ -1,5 +1,3 @@
-import React from 'react';
-import Image from 'next/image';
 import { Button } from '../ui';
 import { ChevronRight, ReceiptText, Cpu, Cable, ScanSearch, Workflow, ArrowDownLeft, ArrowUpRight } from 'lucide-react';
 
@@ -68,7 +66,7 @@ export default function Solutions() {
                   </div>
                 </div>
                 <div className="self-stretch h-56 md:h-64 lg:h-72 flex flex-col justify-start items-start">
-                  <Image alt='Emerging Business' width={384} height={280} className="self-stretch flex-1 object-cover" src="/assets/images/emerging-business-image.png" />
+                  <img alt='Emerging Business' className="self-stretch flex-1 object-cover" src="/assets/images/emerging-business-image.png" />
                 </div>
               </div>
               <div className="w-full md:w-2/3 self-stretch bg-neutral-100 rounded-lg outline outline-1 outline-black-alpha-1/5 flex flex-col lg:flex-row justify-start items-start overflow-hidden">
@@ -89,7 +87,7 @@ export default function Solutions() {
                   </div>
                 </div>
                 <div className="flex-1 self-stretch flex flex-col justify-center items-center">
-                  <Image alt='Growing Enterprise' className="self-stretch flex-1 object-cover h-64 md:h-80 lg:h-auto" width={432} height={680} src="/assets/images/growing-enterprise-image.png" />
+                  <img alt='Growing Enterprise' className="self-stretch flex-1 object-cover h-64 md:h-80 lg:h-auto" src="/assets/images/growing-enterprise-image.png" />
                 </div>
               </div>
             </div>
@@ -137,7 +135,7 @@ export default function Solutions() {
           </div>
           <div className="image-wrapper w-full lg:w-[720px] self-stretch relative flex flex-col items-center justify-center order-1 md:order-2 min-h-[600px] md:min-h-0">
             {/* Image - responsive positioning */}
-            <Image alt="Affordable" src="/assets/images/budget-image.png" width={320} height={320} className="w-64 h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 rounded-2xl md:rounded-[32px] relative md:absolute md:left-32 max-sm:-left-16 max-sm:transform max-sm:scale-x-[-1]" />
+            <img alt="Affordable" src="/assets/images/budget-image.png" className="w-64 h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 rounded-2xl md:rounded-[32px] relative md:absolute md:left-32 max-sm:-left-16 max-sm:transform max-sm:scale-x-[-1]" />
             
             {/* Industry Cards - Grid on mobile, Absolute on desktop */}
             <div className="absolute grid grid-cols-1 gap-8 mt-6 md:hidden w-full max-w-56 md:max-w-md max-sm:scale-90 max-sm:-right-4 z-10">
@@ -202,7 +200,7 @@ export default function Solutions() {
         <div className="self-stretch flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16 lg:gap-0">
           <div className="image-wrapper w-full h-full flex items-center justify-center max-sm:min-h-[600px] max-sm:scale-75">
             <div className='w-96 h-96 rotate-[15deg] rounded-tl-[32px] md:rounded-tl-[45.82px] rounded-tr-[64px] md:rounded-tr-[91.64px] rounded-bl-[64px] md:rounded-bl-[91.64px] rounded-br-[32px] md:rounded-br-[45.82px] overflow-hidden'>
-              <Image alt="Flexible" src="/assets/images/flexible.png" width={592} height={592} className="scale-125 -rotate-[15deg] object-cover w-full h-full" />
+              <img alt="Flexible" src="/assets/images/flexible.png" className="scale-125 -rotate-[15deg] object-cover w-full h-full" />
             </div>
             <div className="w-80 min-w-56 p-5 left-[344.78px] max-sm:left-32 top-[533.81px] max-sm:top-[440px] absolute bg-primary-50 rounded-xl shadow-[0px_12.231521606445312px_30.57880401611328px_-6.115760803222656px_rgba(88,92,95,0.16)] flex justify-start items-center gap-5">
               <div className="p-3 bg-primary-100 rounded-md flex justify-start items-center gap-2">
@@ -246,7 +244,7 @@ export default function Solutions() {
                 </div>
               </div>
             </div>
-            <Image alt="Icon" src="/assets/images/Connector2.png" width={170} height={320} className="block left-48 max-sm:-left-8 top-[280px] max-sm:top-48 absolute" />
+            <img alt="Icon" src="/assets/images/Connector2.png" className="block left-48 max-sm:-left-8 top-[280px] max-sm:top-48 absolute" />
           </div>
           <div className="w-full lg:w-[720px] self-stretch relative flex flex-col items-center justify-center order-1 lg:order-2 min-h-[600px] lg:min-h-0">
             <div className="w-full max-w-[560px] flex flex-col justify-start items-start gap-8">

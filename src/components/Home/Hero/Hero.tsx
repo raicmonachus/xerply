@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { Button } from '../../ui';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
@@ -166,7 +165,7 @@ export default function Hero() {
                     <div className="text-right justify-center text-Black-40%/40 text-[10.01px] font-semibold font-inter leading-3">0</div>
                   </div>
                   <div className="flex-1 self-stretch relative flex flex-col justify-start items-start">
-                    <Image alt="Cashflow Chart" src="/assets/cashflow-chart.svg" fill className="object-cover" />
+                    <img alt="Cashflow Chart" src="/assets/cashflow-chart.svg" className="object-cover" />
                   </div>
                 </div>
               </div>
@@ -179,19 +178,19 @@ export default function Hero() {
                   <div className="self-stretch py-1 flex justify-between items-center overflow-hidden">
                     <div className="w-12 h-12 md:w-16 md:h-16 p-3 md:p-4 bg-primary-600 rounded-lg shadow-lg flex justify-center items-center gap-3 md:gap-5">
                       <div className="flex flex-col justify-center items-center">
-                        <Image alt="Xerply" src="/assets/icons/xerply-symbol.svg" width={36} height={36} className="md:w-12 md:h-12" />
+                        <img alt="Xerply" src="/assets/icons/xerply-symbol.svg" className="md:w-12 md:h-12" />
                       </div>
                     </div>
                     <ArrowRight className="w-5 h-5 md:w-6 md:h-6" color='#5765cd' />
                     <div className="w-12 h-12 md:w-16 md:h-16 p-2 bg-primary-100 rounded-md flex flex-col justify-center items-center gap-0.5">
-                      <Image alt="SAT" src="/assets/icons/sat.svg" width={16} height={16} className="md:w-5 md:h-5" />
+                      <img alt="SAT" src="/assets/icons/sat.svg" className="md:w-5 md:h-5" />
                       <div className="flex flex-col justify-start items-start overflow-hidden">
                         <div className="self-stretch text-center justify-start text-neutral-800 text-xs font-bold font-inter leading-snug">SAT</div>
                       </div>
                     </div>
                     <ArrowRight className="w-5 h-5 md:w-6 md:h-6" color='#b4b8ea' />
                     <div className="w-12 h-12 md:w-16 md:h-16 p-2 bg-neutral-200 rounded-lg flex justify-center items-center gap-2">
-                      <Image alt="Citi" src="/assets/icons/Citi.svg" width={24} height={24} className="md:w-[30px] md:h-[30px]" />                      
+                      <img alt="Citi" src="/assets/icons/Citi.svg" className="md:w-[30px] md:h-[30px]" />                      
                     </div>
                   </div>
                   <div className="self-stretch flex flex-col justify-center items-center gap-1 mt-2 md:mt-4">
@@ -359,7 +358,7 @@ export default function Hero() {
                 <div className="text-right justify-center text-Black-40%/40 text-[10.01px] font-semibold font-inter leading-3">0</div>
               </div>
               <div className="flex-1 self-stretch relative flex flex-col justify-start items-start">
-                <Image alt="Cashflow Chart" src="/assets/cashflow-chart.svg" fill className="object-cover" />
+                <img alt="Cashflow Chart" src="/assets/cashflow-chart.svg" className="object-cover" />
               </div>
             </div>
           </div>
@@ -370,19 +369,19 @@ export default function Hero() {
               <div className="self-stretch py-1 flex justify-between items-center overflow-hidden">
                 <div className="w-12 h-12 md:w-16 md:h-16 p-3 md:p-4 bg-primary-600 rounded-lg shadow-lg flex justify-center items-center gap-3 md:gap-5">
                   <div className="flex flex-col justify-center items-center">
-                    <Image alt="Xerply" src="/assets/icons/xerply-symbol.svg" width={36} height={36} className="md:w-12 md:h-12" />
+                    <img alt="Xerply" src="/assets/icons/xerply-symbol.svg" className="md:w-12 md:h-12" />
                   </div>
                 </div>
                 <ArrowRight className="w-5 h-5 md:w-6 md:h-6" color='#5765cd' />
                 <div className="w-12 h-12 md:w-16 md:h-16 p-2 bg-primary-100 rounded-md flex flex-col justify-center items-center gap-0.5">
-                  <Image alt="SAT" src="/assets/icons/sat.svg" width={16} height={16} className="md:w-5 md:h-5" />
+                  <img alt="SAT" src="/assets/icons/sat.svg" className="md:w-5 md:h-5" />
                   <div className="flex flex-col justify-start items-start overflow-hidden">
                     <div className="self-stretch text-center justify-start text-neutral-800 text-xs font-bold font-inter leading-snug">SAT</div>
                   </div>
                 </div>
                 <ArrowRight className="w-5 h-5 md:w-6 md:h-6" color='#b4b8ea' />
                 <div className="w-12 h-12 md:w-16 md:h-16 p-2 bg-neutral-200 rounded-lg flex justify-center items-center gap-2">
-                  <Image alt="Citi" src="/assets/icons/Citi.svg" width={24} height={24} className="md:w-[30px] md:h-[30px]" />                      
+                  <img alt="Citi" src="/assets/icons/Citi.svg" className="md:w-[30px] md:h-[30px]" />                      
                 </div>
               </div>
               <div className="self-stretch flex flex-col justify-center items-center gap-1 mt-2 md:mt-4">
@@ -532,7 +531,7 @@ export default function Hero() {
                   <div className="text-right justify-center text-Black-40%/40 text-[10.01px] font-semibold font-inter leading-3">0</div>
                 </div>
                 <div className="flex-1 self-stretch relative flex flex-col justify-start items-start">
-                  <Image alt="Cashflow Chart" src="/assets/cashflow-chart.svg" fill className="object-cover" />
+                  <img alt="Cashflow Chart" src="/assets/cashflow-chart.svg" className="object-cover" />
                 </div>
               </div>
             </div>
@@ -543,19 +542,19 @@ export default function Hero() {
                 <div className="self-stretch py-1 flex justify-between items-center overflow-hidden">
                   <div className="w-12 h-12 md:w-16 md:h-16 p-3 md:p-4 bg-primary-600 rounded-lg shadow-lg flex justify-center items-center gap-3 md:gap-5">
                     <div className="flex flex-col justify-center items-center">
-                      <Image alt="Xerply" src="/assets/icons/xerply-symbol.svg" width={36} height={36} className="md:w-12 md:h-12" />
+                      <img alt="Xerply" src="/assets/icons/xerply-symbol.svg" className="md:w-12 md:h-12" />
                     </div>
                   </div>
                   <ArrowRight className="w-5 h-5 md:w-6 md:h-6" color='#5765cd' />
                   <div className="w-12 h-12 md:w-16 md:h-16 p-2 bg-primary-100 rounded-md flex flex-col justify-center items-center gap-0.5">
-                    <Image alt="SAT" src="/assets/icons/sat.svg" width={16} height={16} className="md:w-5 md:h-5" />
+                    <img alt="SAT" src="/assets/icons/sat.svg" className="md:w-5 md:h-5" />
                     <div className="flex flex-col justify-start items-start overflow-hidden">
                       <div className="self-stretch text-center justify-start text-neutral-800 text-xs font-bold font-inter leading-snug">SAT</div>
                     </div>
                   </div>
                   <ArrowRight className="w-5 h-5 md:w-6 md:h-6" color='#b4b8ea' />
                   <div className="w-12 h-12 md:w-16 md:h-16 p-2 bg-neutral-200 rounded-lg flex justify-center items-center gap-2">
-                    <Image alt="Citi" src="/assets/icons/Citi.svg" width={24} height={24} className="md:w-[30px] md:h-[30px]" />                      
+                    <img alt="Citi" src="/assets/icons/Citi.svg" className="md:w-[30px] md:h-[30px]" />                      
                   </div>
                 </div>
                 <div className="self-stretch flex flex-col justify-center items-center gap-1 mt-2 md:mt-4">

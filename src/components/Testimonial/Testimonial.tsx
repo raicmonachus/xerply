@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface TestimonialData {
@@ -83,13 +82,7 @@ export default function Testimonial({
               <div className="w-full max-w-72 flex flex-col justify-start items-center gap-3 md:gap-4">
                 <div className="customer-img w-12 h-12 md:w-14 md:h-14 bg-stone-300 rounded-full">
                   {testimonials[currentIndex].customerImage && (
-                    <Image 
-                      alt={testimonials[currentIndex].customerName} 
-                      src={testimonials[currentIndex].customerImage} 
-                      width={56} 
-                      height={56} 
-                      className="w-full h-full rounded-full object-cover"
-                    />
+                    <img alt={testimonials[currentIndex].customerName} src={testimonials[currentIndex].customerImage} className="w-full h-full rounded-full object-cover" />
                   )}
                 </div>
                 <div className="self-stretch flex flex-col justify-start items-start">
@@ -146,13 +139,7 @@ export default function Testimonial({
                 <div className="w-full max-w-72 flex flex-col justify-start items-center gap-3 md:gap-4">
                   <div className="customer-img w-12 h-12 md:w-14 md:h-14 bg-stone-300 rounded-full">
                     {testimonial.customerImage && (
-                      <Image 
-                        alt={testimonial.customerName} 
-                        src={testimonial.customerImage} 
-                        width={56} 
-                        height={56} 
-                        className="w-full h-full rounded-full object-cover"
-                      />
+                      <img alt={testimonial.customerName} src={testimonial.customerImage} className="w-full h-full rounded-full object-cover" />
                     )}
                   </div>
                   <div className="self-stretch flex flex-col justify-start items-start">

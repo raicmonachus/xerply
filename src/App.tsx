@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Testimonial from '@/components/Testimonial';
 import Footer from '@/components/Footer';
@@ -13,7 +11,7 @@ import Contact from '@/components/Contact';
 
 export type PageType = 'home' | 'solutions' | 'features' | 'pricing' | 'about' | 'contact';
 
-export default function MainLayout() {
+function App() {
   const [currentPage, setCurrentPage] = useState<PageType>('home');
 
   const handleNavigate = (page: PageType) => {
@@ -50,3 +48,5 @@ export default function MainLayout() {
     </div>
   );
 }
+
+export default App;
