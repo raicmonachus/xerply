@@ -1,5 +1,6 @@
 
 import { TimelineItem } from './types';
+import { useParallax } from '@/hooks/useParallax';
 
 interface TimelineContentProps {
   item: TimelineItem;
@@ -16,6 +17,9 @@ export default function TimelineContent({
   contentPosition,
   animated 
 }: TimelineContentProps) {
+  const imageRightRef = useParallax<HTMLDivElement>();
+  const imageLeftRef = useParallax<HTMLDivElement>();
+  
   return (
     <div
       id={`timeline-content-${index}`}
@@ -49,14 +53,14 @@ export default function TimelineContent({
             </div>
             
             {/* Image on Right */}
-            <div className="flex-1 self-stretch relative min-h-[300px] lg:min-h-[400px]">
+            <div ref={imageRightRef} className="parallax-image-slow flex-1 self-stretch relative min-h-[300px] lg:min-h-[400px]">
               <img className="w-full h-full object-cover rounded-2xl" src={item.image} alt={item.imageAlt || `${item.year} - ${item.title}`} />
             </div>
           </>
         ) : (
           <>
             {/* Image on Left */}
-            <div className="flex-1 self-stretch relative min-h-[300px] lg:min-h-[400px]">
+            <div ref={imageLeftRef} className="parallax-image-slow flex-1 self-stretch relative min-h-[300px] lg:min-h-[400px]">
               <img className="w-full h-full object-cover rounded-2xl" src={item.image} alt={item.imageAlt || `${item.year} - ${item.title}`} />
             </div>
             

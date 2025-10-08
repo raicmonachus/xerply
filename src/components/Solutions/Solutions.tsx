@@ -1,7 +1,20 @@
 import { Button } from '../ui';
 import { ChevronRight, ReceiptText, Cpu, Cable, ScanSearch, Workflow, ArrowDownLeft, ArrowUpRight } from 'lucide-react';
+import { useParallax } from '../../hooks/useParallax';
 
 export default function Solutions() {
+  // Parallax refs for Business Solutions section
+  const smallBusinessRef = useParallax<HTMLDivElement>();
+  const mediumBusinessRef = useParallax<HTMLDivElement>();
+  
+  // Parallax refs for Industries section
+  const industriesTextRef = useParallax<HTMLDivElement>();
+  const industriesImageRef = useParallax<HTMLDivElement>();
+  
+  // Parallax refs for Transform section
+  const transformImageRef = useParallax<HTMLDivElement>();
+  const transformTextRef = useParallax<HTMLDivElement>();
+  
   return (
     <div className="self-stretch h-auto min-h-screen relative overflow-hidden py-12 md:py-16 lg:py-20">
       {/* Background decorative element */}
@@ -48,7 +61,7 @@ export default function Solutions() {
           </div>
           <div className="self-stretch flex flex-col justify-start items-start gap-8">
             <div className="self-stretch flex flex-col lg:flex-row justify-start items-start gap-8">
-              <div className="w-full lg:flex-1 bg-neutral-100 rounded-lg outline outline-1 outline-black-alpha-1/5 flex flex-col justify-start items-start overflow-hidden">
+              <div ref={smallBusinessRef} className="parallax-from-left w-full lg:flex-1 bg-neutral-100 rounded-lg outline outline-1 outline-black-alpha-1/5 flex flex-col justify-start items-start overflow-hidden">
                 <div className="self-stretch p-6 md:p-8 flex flex-col justify-start items-start gap-4 md:gap-6">
                   <div className="self-stretch flex flex-col justify-start items-start gap-2">
                     <div className="flex justify-start items-center">
@@ -69,7 +82,7 @@ export default function Solutions() {
                   <img alt='Emerging Business' className="self-stretch flex-1 object-cover" src="/assets/images/emerging-business-image.png" />
                 </div>
               </div>
-              <div className="w-full md:w-2/3 self-stretch bg-neutral-100 rounded-lg outline outline-1 outline-black-alpha-1/5 flex flex-col lg:flex-row justify-start items-start overflow-hidden">
+              <div ref={mediumBusinessRef} className="parallax-from-right w-full md:w-2/3 self-stretch bg-neutral-100 rounded-lg outline outline-1 outline-black-alpha-1/5 flex flex-col lg:flex-row justify-start items-start overflow-hidden">
                 <div className="flex-1 self-stretch p-8 flex flex-col justify-center items-start gap-8">
                   <div className="self-stretch flex flex-col justify-start items-start gap-2">
                     <div className="flex justify-start items-center">
@@ -98,7 +111,7 @@ export default function Solutions() {
       <div className="self-stretch relative flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20">
         <div className="w-[640px] h-[640px] left-[820.02px] top-[370px] absolute origin-top-left -rotate-45 bg-primary-50 rounded-[140px] hidden lg:block" />
         <div className="self-stretch flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16 lg:gap-0">
-          <div className="w-full h-full lg:flex-1 self-stretch flex flex-col justify-center items-start md:items-end gap-6 md:gap-8 order-2 md:order-1 md:pr-8 xl:pr-20">
+          <div ref={industriesTextRef} className="parallax-from-left w-full h-full lg:flex-1 self-stretch flex flex-col justify-center items-start md:items-end gap-6 md:gap-8 order-2 md:order-1 md:pr-8 xl:pr-20">
             <div className="w-full max-w-[560px] flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
                 <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
@@ -133,7 +146,7 @@ export default function Solutions() {
               </div>
             </div>
           </div>
-          <div className="image-wrapper w-full lg:w-[720px] self-stretch relative flex flex-col items-center justify-center order-1 md:order-2 min-h-[600px] md:min-h-0">
+          <div ref={industriesImageRef} className="parallax-from-right image-wrapper w-full lg:w-[720px] self-stretch relative flex flex-col items-center justify-center order-1 md:order-2 min-h-[600px] md:min-h-0">
             {/* Image - responsive positioning */}
             <img alt="Affordable" src="/assets/images/budget-image.png" className="w-64 h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 rounded-2xl md:rounded-[32px] relative md:absolute md:left-32 max-sm:-left-16 max-sm:transform max-sm:scale-x-[-1]" />
             
@@ -198,7 +211,7 @@ export default function Solutions() {
       { /* Section - Transform */}
       <div className="self-stretch relative flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20">
         <div className="self-stretch flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16 lg:gap-0">
-          <div className="image-wrapper w-full h-full flex items-center justify-center max-sm:min-h-[600px] max-sm:scale-75">
+          <div ref={transformImageRef} className="parallax-from-left image-wrapper w-full h-full flex items-center justify-center max-sm:min-h-[600px] max-sm:scale-75">
             <div className='w-96 h-96 rotate-[15deg] rounded-tl-[32px] md:rounded-tl-[45.82px] rounded-tr-[64px] md:rounded-tr-[91.64px] rounded-bl-[64px] md:rounded-bl-[91.64px] rounded-br-[32px] md:rounded-br-[45.82px] overflow-hidden'>
               <img alt="Flexible" src="/assets/images/flexible.png" className="scale-125 -rotate-[15deg] object-cover w-full h-full" />
             </div>
@@ -246,7 +259,7 @@ export default function Solutions() {
             </div>
             <img alt="Icon" src="/assets/images/Connector2.png" className="block left-48 max-sm:-left-8 top-[280px] max-sm:top-48 absolute" />
           </div>
-          <div className="w-full lg:w-[720px] self-stretch relative flex flex-col items-center justify-center order-1 lg:order-2 min-h-[600px] lg:min-h-0">
+          <div ref={transformTextRef} className="parallax-from-right w-full lg:w-[720px] self-stretch relative flex flex-col items-center justify-center order-1 lg:order-2 min-h-[600px] lg:min-h-0">
             <div className="w-full max-w-[560px] flex flex-col justify-start items-start gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
                 <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">

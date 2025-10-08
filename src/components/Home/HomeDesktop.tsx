@@ -1,8 +1,23 @@
 import Hero from './Hero';
 import { ChevronRight, CircleCheckBig, DatabaseBackup } from 'lucide-react';
 import { Button } from '../ui';
+import { useParallax } from '@/hooks/useParallax';
 
 export default function HomeDesktop() {
+  // Parallax refs for value prop sections
+  const autonomousImageRef = useParallax<HTMLDivElement>();
+  const autonomousTextRef = useParallax<HTMLDivElement>();
+  const flexibleImageRef = useParallax<HTMLDivElement>();
+  const flexibleTextRef = useParallax<HTMLDivElement>();
+  const effectiveImageRef = useParallax<HTMLDivElement>();
+  const effectiveTextRef = useParallax<HTMLDivElement>();
+  const intelligentImageRef = useParallax<HTMLDivElement>();
+  const intelligentTextRef = useParallax<HTMLDivElement>();
+  const affordableImageRef = useParallax<HTMLDivElement>();
+  const affordableTextRef = useParallax<HTMLDivElement>();
+  const integrationsImageRef = useParallax<HTMLDivElement>();
+  const integrationsTextRef = useParallax<HTMLDivElement>();
+  
   return (
     <>
       <Hero />
@@ -12,7 +27,7 @@ export default function HomeDesktop() {
           <div className="self-stretch text-center justify-start"><span className="text-neutral-800 text-3xl sm:text-4xl md:text-5xl font-medium font-inter leading-tight sm:leading-snug md:leading-[68px]">Why Choose </span><span className="text-primary-600 text-3xl sm:text-4xl md:text-5xl font-bold font-inter leading-tight sm:leading-snug md:leading-[68px]">Xerply?</span></div>
           <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24">
             {/* Imagen y elementos decorativos - Arriba en móvil */}
-            <div className="image-wrapper w-full lg:flex-1 min-h-[400px] md:min-h-[500px] lg:h-[630.57px] relative flex justify-center items-center order-1 lg:order-2">
+            <div ref={autonomousImageRef} className="parallax-from-right image-wrapper w-full lg:flex-1 min-h-[400px] md:min-h-[500px] lg:h-[630.57px] relative flex justify-center items-center order-1 lg:order-2">
               <img alt="Autonomus" src="/assets/images/automation.png" className="w-full max-w-[300px] md:max-w-md lg:max-w-full h-auto max-sm:-ml-24 rounded-tl-[128px] md:rounded-tl-[256px] rounded-tr-[32px] md:rounded-tr-[64px] rounded-bl-[32px] md:rounded-bl-[64px] rounded-br-[64px] md:rounded-br-[128px] transform scale-x-[-1]" />
               <div className="w-full max-w-xs md:max-w-sm lg:w-96 p-3 md:p-4 absolute max-sm:-mr-16 top-[-20px] md:top-[-32px] lg:left-[222px] lg:-top-8 bg-white-alpha-5 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg flex flex-col justify-start items-center gap-4 md:gap-6">
                 <div className="self-stretch min-w-0 px-4 md:px-6 py-2 md:py-3 bg-primary-50 rounded-xl md:rounded-2xl flex justify-start items-center gap-3 md:gap-6">
@@ -89,7 +104,7 @@ export default function HomeDesktop() {
             </div>
             
             {/* Texto - Abajo en móvil */}
-            <div className="w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
+            <div ref={autonomousTextRef} className="parallax-from-left w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
               <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
                 <div className="self-stretch flex flex-col justify-start items-start gap-4 md:gap-5">
                   <div className="flex justify-start items-center">
@@ -120,7 +135,7 @@ export default function HomeDesktop() {
         { /* Value prop section - Flexible */}
         <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24">
           {/* Imagen y elementos decorativos - Arriba en móvil */}
-          <div className="image-wrapper w-full lg:flex-1 min-h-[400px] md:min-h-[500px] lg:h-[600px] relative flex items-center justify-center order-1">
+          <div ref={flexibleImageRef} className="parallax-from-left image-wrapper w-full lg:flex-1 min-h-[400px] md:min-h-[500px] lg:h-[600px] relative flex items-center justify-center order-1">
             <div className='w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rotate-[15deg] rounded-tl-[32px] md:rounded-tl-[45.82px] rounded-tr-[64px] md:rounded-tr-[91.64px] rounded-bl-[64px] md:rounded-bl-[91.64px] rounded-br-[32px] md:rounded-br-[45.82px] overflow-hidden'>
               <img alt="Flexible" src="/assets/images/flexible.png" className="scale-125 -rotate-[15deg] object-cover w-full h-full" />
             </div>
@@ -135,7 +150,7 @@ export default function HomeDesktop() {
                 </div>
               </div>
               <div className="self-stretch h-40 min-h-28 py-2.5 flex flex-col justify-center items-center gap-2">
-                <div className='w-56 h-[90px] overflow-hidden flex items-center justify-center'>
+                <div className='w-full max-w-full h-[90px] overflow-hidden flex items-center justify-center'>
                   <img alt="Icon" src="/assets/images/risk-chart.png" />
                 </div>
                 <div className="w-20 pl-5 flex justify-between items-start">
@@ -157,10 +172,10 @@ export default function HomeDesktop() {
               <div className="flex-1 justify-start text-primary-600 text-sm md:text-base font-normal font-source-sans-pro leading-normal">Show me cash risk by customer, not by supplier.</div>
             </div>
             {/* Connector - Hidden on mobile */}
-            <img alt="Icon" src="/assets/images/Connector.png" className="hidden lg:block left-24 top-[210px] absolute" />
+            <img alt="Icon" src="/assets/images/Connector.png" className="block left-24 top-[210px] absolute max-sm:w-24 max-sm:left-10" />
           </div>
           {/* Texto - Abajo en móvil */}
-          <div className="w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
+          <div ref={flexibleTextRef} className="parallax-from-right w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
             <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
                 <div className="flex justify-start items-center">
@@ -185,7 +200,7 @@ export default function HomeDesktop() {
         { /* Value prop section - Effective */}
         <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24 max-sm:mt-12">
           {/* Texto - Arriba en móvil */}
-          <div className="w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
+          <div ref={effectiveTextRef} className="parallax-from-left w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
             <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
                 <div className="flex justify-start items-center">
@@ -207,7 +222,7 @@ export default function HomeDesktop() {
             </div>
           </div>
           {/* Imagen y elementos decorativos - Abajo en móvil */}
-          <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
+          <div ref={effectiveImageRef} className="parallax-from-right image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
             {/* Pattern SVG */}
             <img alt="Icon" src="/assets/images/Patterns_1.svg" className="w-40 h-52 md:w-48 md:h-60 lg:w-56 lg:h-72 absolute top-[-120px] right-0 max-sm:top-16 md:top-[-180px] lg:left-[260px] lg:top-[-278px] lg:right-auto" />
             {/* Main Image */}
@@ -271,7 +286,7 @@ export default function HomeDesktop() {
         { /* Value prop section - Intelligent */}
         <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24 relative">
           {/* Imagen y elementos decorativos - Arriba en móvil */}
-          <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
+          <div ref={intelligentImageRef} className="parallax-from-right image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
             <img alt="Patterns" src="/assets/images/ai-business-image.png" className="w-80 h-auto md:w-96 lg:w-96 relative lg:absolute lg:left-0 lg:top-0 max-sm:-left-8 rounded-lg" />
             {/* AI Chat Interface Card */}
             <div className="w-full max-w-xs md:max-w-sm lg:w-96 p-3 md:p-4 absolute right-0 top-8 md:top-12 lg:left-[204.09px] lg:top-[81px] max-sm:left-18 max-sm:top-48 lg:right-auto bg-white-alpha-5 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg flex flex-col justify-start items-center gap-4 md:gap-6">
@@ -293,7 +308,7 @@ export default function HomeDesktop() {
             </div>
           </div>
           {/* Texto - Abajo en móvil */}
-          <div className="w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1 max-sm:mt-12">
+          <div ref={intelligentTextRef} className="parallax-from-left w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1 max-sm:mt-12">
             <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
                 <div className="flex justify-start items-center">
@@ -324,7 +339,7 @@ export default function HomeDesktop() {
         { /* Value prop section - Affordable */}
         <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 relative flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24">
           {/* Texto - Arriba en móvil */}
-          <div className="w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
+          <div ref={affordableTextRef} className="parallax-from-left w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
             <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
                 <div className="flex justify-start items-center">
@@ -346,7 +361,7 @@ export default function HomeDesktop() {
             </div>
           </div>
           {/* Imagen y elementos decorativos - Abajo en móvil */}
-          <div className="image-wrapper w-full lg:flex-1 min-h-[550px] md:min-h-[600px] lg:h-[656px] relative flex items-center justify-center order-1 lg:order-2">
+          <div ref={affordableImageRef} className="parallax-from-right image-wrapper w-full lg:flex-1 min-h-[550px] md:min-h-[600px] lg:h-[656px] relative flex items-center justify-center order-1 lg:order-2">
             {/* Pattern SVG */}
             <img alt="Patterns" src="/assets/images/Patterns_4.svg" className="hidden lg:block absolute left-12 top-[480px]" />
             {/* Main Image */}
@@ -437,7 +452,7 @@ export default function HomeDesktop() {
         { /* Value prop section - Integrations */}
         <div className="self-stretch px-0 md:px-4 lg:px-12 py-8 md:py-12 lg:py-24 flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-24">
           {/* Imagen y elementos decorativos - Arriba en móvil */}
-          <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
+          <div ref={integrationsImageRef} className="parallax-from-right image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center order-1 lg:order-2">
             {/* Main Image */}
             <img alt="Integrations" src="/assets/images/young-woman.png" className="w-64 h-auto md:w-80 lg:w-80 rounded-lg relative lg:absolute lg:left-56 lg:top-0 max-sm:left-16" />
             {/* Integration Flow - Vertical in all screen sizes */}
@@ -502,7 +517,7 @@ export default function HomeDesktop() {
             </div>
           </div>
           {/* Texto - Abajo en móvil */}
-          <div className="w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
+          <div ref={integrationsTextRef} className="parallax-from-left w-full lg:flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 order-2 lg:order-1">
             <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
                 <div className="flex justify-start items-center">
@@ -532,7 +547,7 @@ export default function HomeDesktop() {
         { /* CTA Section */}
         <div className="self-stretch relative flex flex-col justify-start items-center max-sm:mt-24">
           <div className="w-[910.32px] h-[910.32px] left-[-463px] top-[919.59px] absolute origin-top-left rotate-[-57.78deg] bg-cyan-50 rounded-[236.46px] block max-sm:w-96 max-sm:h-96 max-sm:top-48 max-sm:left-16 max-sm:rounded-[80px] max-sm:-z-5" />
-          <div className="self-stretch px-4 md:px-8 lg:px-14 py-16 md:py-20 lg:py-28 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 max-sm:order-1 max-sm:z-50">
+          <div className="self-stretch px-4 md:px-8 lg:px-14 py-16 md:py-20 lg:py-28 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 max-sm:order-1 max-sm:z-20">
             <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20">
               <div className="w-full max-w-[768px] flex flex-col justify-start items-center gap-6 md:gap-8">
                 <div className="self-stretch flex flex-col justify-start items-center gap-4 md:gap-6">

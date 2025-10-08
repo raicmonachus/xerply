@@ -1,6 +1,12 @@
 import { Button, ToggleSwitch, PricingComparisonTable } from '../ui';
+import { useParallax } from '@/hooks/useParallax';
 
 export default function Pricing() {
+  // Parallax refs for pricing cards
+  const freeCardRef = useParallax<HTMLDivElement>();
+  const businessCardRef = useParallax<HTMLDivElement>();
+  const enterpriseCardRef = useParallax<HTMLDivElement>();
+  
   return (
     <div className="self-stretch h-auto min-h-screen relative overflow-hidden py-12 md:py-16 lg:py-20">
       {/* Background decorative element */}
@@ -49,7 +55,7 @@ export default function Pricing() {
           </div>
           <div className="self-stretch flex flex-col md:flex-row justify-start items-stretch gap-6 md:gap-8">
             {/* Free Plan */}
-            <div className="flex-1 self-stretch p-6 md:p-8 bg-neutral-200 rounded-lg outline outline-1 outline-offset-[-1px] outline-black-alpha-2/20 flex flex-col justify-start items-start gap-10 md:gap-14">
+            <div ref={freeCardRef} className="parallax-image flex-1 self-stretch p-6 md:p-8 bg-neutral-200 rounded-lg outline outline-1 outline-offset-[-1px] outline-black-alpha-2/20 flex flex-col justify-start items-start gap-10 md:gap-14">
               <div className="self-stretch flex flex-col justify-start items-center gap-6 md:gap-8">
                 <div className="self-stretch flex flex-col justify-start items-center gap-2">
                   <div className="self-stretch text-center justify-start text-primary-600 text-lg md:text-xl font-bold font-inter leading-normal">Free</div>
@@ -71,7 +77,7 @@ export default function Pricing() {
             </div>
             
             {/* Business Plan - Highlighted */}
-            <div className="flex-1 self-stretch p-6 md:p-8 bg-primary-50 rounded-lg shadow-[0px_16px_32px_-12px_rgba(88,92,95,0.10)] outline outline-3 outline-offset-[-3px] outline-primary-600 flex flex-col justify-start items-start gap-10 md:gap-14">
+            <div ref={businessCardRef} className="parallax-image flex-1 self-stretch p-6 md:p-8 bg-primary-50 rounded-lg shadow-[0px_16px_32px_-12px_rgba(88,92,95,0.10)] outline outline-3 outline-offset-[-3px] outline-primary-600 flex flex-col justify-start items-start gap-10 md:gap-14">
               <div className="self-stretch flex flex-col justify-start items-center gap-6 md:gap-8">
                 <div className="self-stretch flex flex-col justify-start items-center gap-2">
                   <div className="self-stretch text-center justify-start text-primary-600 text-lg md:text-xl font-bold font-inter leading-normal">Business</div>
@@ -96,7 +102,7 @@ export default function Pricing() {
             </div>
             
             {/* Enterprise Plan */}
-            <div className="flex-1 self-stretch p-6 md:p-8 bg-neutral-50 rounded-lg outline outline-1 outline-offset-[-1px] outline-black-alpha-2/20 flex flex-col justify-start items-start gap-10 md:gap-14">
+            <div ref={enterpriseCardRef} className="parallax-image flex-1 self-stretch p-6 md:p-8 bg-neutral-50 rounded-lg outline outline-1 outline-offset-[-1px] outline-black-alpha-2/20 flex flex-col justify-start items-start gap-10 md:gap-14">
               <div className="self-stretch flex flex-col justify-start items-center gap-6 md:gap-8">
                 <div className="self-stretch flex flex-col justify-start items-center gap-2">
                   <div className="self-stretch text-center justify-start text-primary-600 text-lg md:text-xl font-bold font-inter leading-normal">Enterprise</div>

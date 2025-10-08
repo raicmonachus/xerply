@@ -1,7 +1,15 @@
 import { Button, AutoCarousel } from '../ui';
 import { BellDot, ChevronRight, Unplug } from 'lucide-react';
+import { useParallax } from '@/hooks/useParallax';
 
 export default function Features() {
+  // Parallax refs for sections
+  const conversationalImageRef = useParallax<HTMLDivElement>();
+  const notificationTextRef = useParallax<HTMLDivElement>();
+  const notificationImageRef = useParallax<HTMLDivElement>();
+  const integrationTextRef = useParallax<HTMLDivElement>();
+  const integrationImageRef = useParallax<HTMLDivElement>();
+  
   return (
     <div className="self-stretch h-auto min-h-screen relative overflow-hidden py-12 md:py-16 lg:py-20">
       {/* Background decorative element */}
@@ -56,7 +64,7 @@ export default function Features() {
           </div>
 
           {/* Content Card */}
-          <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
+          <div ref={conversationalImageRef} className="parallax-image self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
             <div className="self-stretch flex justify-start items-start">
               <div className="flex-1 min-h-[500px] md:min-h-[600px] lg:h-[640px] bg-neutral-100 rounded-lg outline outline-1 outline-black-alpha-1 flex flex-col lg:flex-row justify-center items-center overflow-hidden">
                 {/* Chat Visual Section - Responsive: stacked on mobile, side-by-side on desktop */}
@@ -255,7 +263,7 @@ export default function Features() {
         <div className="w-full max-w-[1280px] flex flex-col justify-start items-start gap-12 md:gap-16 lg:gap-20">
           <div className="self-stretch flex flex-col-reverse lg:flex-row justify-start items-center gap-8 md:gap-12 lg:gap-20">
             {/* Text Content - First on mobile, second on desktop */}
-            <div className="flex-1 w-full flex flex-col justify-start items-start gap-6 md:gap-8">
+            <div ref={notificationTextRef} className="parallax-from-left flex-1 w-full flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-4 md:gap-6">
                 <div className="flex justify-start items-center">
                   <div className="justify-start text-neutral-800 text-sm md:text-base font-semibold font-source-sans-pro leading-normal">Notification</div>
@@ -281,7 +289,7 @@ export default function Features() {
             </div>
             
             {/* Image Section - Second on mobile, first on desktop */}
-            <div className="w-full lg:w-[600px] min-h-[400px] md:min-h-[500px] lg:h-[640px] relative flex justify-center lg:justify-end items-center lg:items-end">
+            <div ref={notificationImageRef} className="parallax-from-right w-full lg:w-[600px] min-h-[400px] md:min-h-[500px] lg:h-[640px] relative flex justify-center lg:justify-end items-center lg:items-end">
               {/* Main Image */}
               <img 
                 alt="Notifications" 
@@ -363,7 +371,7 @@ export default function Features() {
         <div className="w-full max-w-[1280px] flex flex-col justify-start items-start gap-12 md:gap-16 lg:gap-20">
           <div className="self-stretch flex flex-col lg:flex-row justify-start items-center gap-8 md:gap-12 lg:gap-20">
             {/* Image Section - First on mobile, first on desktop */}
-            <div className="image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center">
+            <div ref={integrationImageRef} className="parallax-from-left image-wrapper w-full lg:flex-1 min-h-[500px] md:min-h-[550px] lg:h-[592px] relative flex items-center justify-center">
               {/* Main Image */}
               <img alt="Integrations" src="/assets/images/young-woman.png" className="w-64 h-auto md:w-80 lg:w-80 rounded-lg relative lg:absolute left-16 lg:left-56 lg:top-0" />
               {/* Integration Flow - Vertical in all screen sizes */}
@@ -429,7 +437,7 @@ export default function Features() {
             </div>
             
             {/* Text Content - Second on mobile and desktop */}
-            <div className="flex-1 w-full flex flex-col justify-start items-start gap-6 md:gap-8">
+            <div ref={integrationTextRef} className="parallax-from-right flex-1 w-full flex flex-col justify-start items-start gap-6 md:gap-8">
               <div className="self-stretch flex flex-col justify-start items-start gap-4 md:gap-6">
                 <Unplug className="hidden sm:block w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 text-cyan-500" />
                 <div className="self-stretch flex flex-col justify-start items-start gap-4 md:gap-6">

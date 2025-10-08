@@ -4,6 +4,7 @@ import { Button, Input, Select, RadioGroup, Textarea, Checkbox } from '../ui';
 import type { SelectOption } from '../ui/Select/Select';
 import type { RadioOption } from '../ui/RadioGroup/RadioGroup';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useParallax } from '@/hooks/useParallax';
 
 const reasonOptions: SelectOption[] = [
   { value: 'demo', label: 'Request a demo' },
@@ -23,6 +24,8 @@ const whoAreYouOptions: RadioOption[] = [
 ];
 
 export default function Contact() {
+  const ctaImageRef = useParallax<HTMLImageElement>();
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -215,9 +218,10 @@ export default function Contact() {
           </div>
         </div>
         <img 
+          ref={ctaImageRef}
           alt="Decorative Element" 
           src="/assets/images/confident-image.png" 
-          className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-tl-[40px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[40px] z-10" 
+          className="parallax-image w-full max-w-md md:max-w-lg lg:max-w-xl rounded-tl-[40px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[40px] z-10" 
         />
       </div>
     </div>

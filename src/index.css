@@ -42,3 +42,83 @@ body {
 .font-source-sans-pro {
   font-family: var(--font-source-sans-pro);
 }
+
+/* Parallax Scroll Reveal Animations */
+/* Base class for parallax images - reveals from bottom to top on scroll */
+.parallax-image {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.parallax-image.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desktop-only variant - only applies on screens >= 768px */
+.parallax-image-desktop-only {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .parallax-image-desktop-only {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .parallax-image-desktop-only.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Variation: Faster animation */
+.parallax-image-fast {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.parallax-image-fast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variation: Slower animation */
+.parallax-image-slow {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.parallax-image-slow.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variation: From left */
+.parallax-from-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.parallax-from-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Variation: From right */
+.parallax-from-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.parallax-from-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}

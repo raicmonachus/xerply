@@ -93,7 +93,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
         {/* Mobile Menu */}
         <div className={`
           lg:hidden max-w-[95%] fixed top-[72px] md:top-[88px] lg:top-[104px] left-0 right-0 mx-auto rounded-2xl bg-neutral-50 shadow-lg
-          transition-all duration-300 ease-in-out z-40
+          transition-all duration-300 ease-in-out z-[9999]
           ${mobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}
         `}>
           <div className="flex flex-col p-6 md:p-8 gap-6">
