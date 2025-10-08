@@ -33,13 +33,13 @@ export default function RadioGroup({
   };
 
   return (
-    <div className={`self-stretch py-4 flex flex-col justify-start items-start gap-4 ${className}`}>
+    <div className={`w-full py-4 flex flex-col justify-start items-start gap-4 ${className}`}>
       {label && (
         <div className="justify-center text-neutral-800 text-sm font-normal font-inter leading-tight">
           {label}
         </div>
       )}
-      <div className="self-stretch flex flex-col justify-start items-start gap-3.5">
+      <div className="w-full flex flex-col justify-start items-start gap-3.5">
         {columns === 2 ? (
           // Two columns layout
           <>
@@ -51,7 +51,7 @@ export default function RadioGroup({
               }
               return rows;
             }, []).map((row, rowIndex) => (
-              <div key={rowIndex} className="self-stretch h-6 flex justify-start items-start gap-6">
+              <div key={rowIndex} className="w-full flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6">
                 {row.map((option) => (
                   <label
                     key={option.value}
@@ -86,7 +86,7 @@ export default function RadioGroup({
           </>
         ) : (
           // Single column layout
-          <div className="self-stretch flex flex-col justify-start items-start gap-3.5">
+          <div className="w-full flex flex-col justify-start items-start gap-3.5">
             {options.map((option) => (
               <label
                 key={option.value}

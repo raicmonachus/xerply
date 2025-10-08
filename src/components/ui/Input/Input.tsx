@@ -18,7 +18,7 @@ export default function Input({
   const inputId = id || `input-${label?.toLowerCase().replace(/\s+/g, '-')}`;
 
   return (
-    <div className={`flex flex-col justify-start items-start gap-2 ${fullWidth ? 'flex-1' : ''}`}>
+    <div className={`flex flex-col justify-start items-start gap-2 ${fullWidth ? 'w-full flex-1' : ''}`}>
       {label && (
         <label 
           htmlFor={inputId}
@@ -29,7 +29,7 @@ export default function Input({
       )}
       <input
         id={inputId}
-        className={`self-stretch px-3 py-2 bg-black-alpha-1/5 rounded-md outline outline-1 outline-black-alpha-2/20 
+        className={`w-full px-3 py-2 bg-black-alpha-1/5 rounded-md outline outline-1 outline-black-alpha-2/20 
           flex justify-start items-center gap-2 text-neutral-800 text-base font-normal font-source-sans-pro leading-normal
           placeholder:text-black-alpha-2/40
           focus:outline-2 focus:outline-primary-500 focus:bg-white

@@ -92,38 +92,50 @@ export default function AboutUs() {
         </div>
       </div>
       { /* Section - Vision & Mision */}
-      <div className="self-stretch flex flex-col justify-start items-center gap-20 overflow-hidden">
-        <div className="self-stretch flex justify-start items-start">
-          <div className="flex-1 self-stretch pl-16 pr-20 py-28 flex flex-col justify-center items-end gap-8">
-            <div className="w-full max-w-[560px] py-2 flex flex-col justify-start items-start gap-8">
-              <div className="self-stretch flex justify-start items-start gap-6">
-                <Telescope className="w-12 h-12 text-cyan-500" />
-                <div className="flex-1 flex flex-col justify-start items-start gap-4">
-                  <div className="self-stretch justify-start text-neutral-800 text-3xl font-medium font-inter leading-10">Our core vision</div>
-                  <div className="self-stretch justify-start text-neutral-800 text-base font-normal font-source-sans-pro leading-normal">Enabling digital transformation through intelligent automation and strategic business insights</div>
+      <div className="self-stretch flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 overflow-hidden">
+        <div className="self-stretch flex flex-col lg:flex-row justify-start items-center lg:items-stretch">
+          {/* Text Content */}
+          <div className="flex-1 self-stretch px-4 md:px-8 lg:pl-16 lg:pr-20 py-12 md:py-20 lg:py-28 flex flex-col justify-center items-center lg:items-end gap-6 md:gap-8">
+            <div className="w-full max-w-[560px] py-2 flex flex-col justify-start items-start gap-6 md:gap-8">
+              <div className="self-stretch flex justify-start items-start gap-4 md:gap-6">
+                <Telescope className="w-10 h-10 md:w-12 md:h-12 text-cyan-500 flex-shrink-0" />
+                <div className="flex-1 flex flex-col justify-start items-start gap-3 md:gap-4">
+                  <div className="self-stretch justify-start text-neutral-800 text-2xl md:text-3xl font-medium font-inter leading-8 md:leading-10">Our core vision</div>
+                  <div className="self-stretch justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">
+                    Enabling digital transformation through intelligent automation and strategic business insights
+                  </div>
                 </div>
               </div>
-              <div className="self-stretch flex justify-start items-start gap-6">
-                <Compass className="w-12 h-12 text-cyan-500" />
-                <div className="flex-1 flex flex-col justify-start items-start gap-4">
-                  <div className="self-stretch justify-start text-neutral-800 text-3xl font-medium font-inter leading-10">Our mission</div>
-                  <div className="self-stretch justify-start text-neutral-800 text-base font-normal font-source-sans-pro leading-normal">Delivering cutting-edge AI technology that simplifies complex business processes</div>
+              <div className="self-stretch flex justify-start items-start gap-4 md:gap-6">
+                <Compass className="w-10 h-10 md:w-12 md:h-12 text-cyan-500 flex-shrink-0" />
+                <div className="flex-1 flex flex-col justify-start items-start gap-3 md:gap-4">
+                  <div className="self-stretch justify-start text-neutral-800 text-2xl md:text-3xl font-medium font-inter leading-8 md:leading-10">Our mission</div>
+                  <div className="self-stretch justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">
+                    Delivering cutting-edge AI technology that simplifies complex business processes
+                  </div>
                 </div>
               </div>
-              <div className="self-stretch flex justify-start items-start gap-6">
-                <MessageCircleHeart className="w-12 h-12 text-cyan-500" />
-                <div className="flex-1 flex flex-col justify-start items-start gap-4">
-                  <div className="self-stretch justify-start text-neutral-800 text-3xl font-medium font-inter leading-10">Our values</div>
-                  <div className="self-stretch justify-start text-neutral-800 text-base font-normal font-source-sans-pro leading-normal">Commitment to innovation, transparency, and empowering businesses through intelligent technological solutions</div>
+              <div className="self-stretch flex justify-start items-start gap-4 md:gap-6">
+                <MessageCircleHeart className="w-10 h-10 md:w-12 md:h-12 text-cyan-500 flex-shrink-0" />
+                <div className="flex-1 flex flex-col justify-start items-start gap-3 md:gap-4">
+                  <div className="self-stretch justify-start text-neutral-800 text-2xl md:text-3xl font-medium font-inter leading-8 md:leading-10">Our values</div>
+                  <div className="self-stretch justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">
+                    Commitment to innovation, transparency, and empowering businesses through intelligent technological solutions
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <img className="flex-1 self-stretch w-full max-w-full" src="/assets/images/placeholder/Placeholder_Image.png" alt="About Us Image" />
+          {/* Image */}
+          <img 
+            className="flex-1 self-stretch w-full h-64 md:h-80 lg:h-auto object-cover" 
+            src="/assets/images/placeholder/Placeholder_Image.png" 
+            alt="About Us Vision and Mission" 
+          />
         </div>
       </div>
       { /* Section - Our Team */}
-      <div className="self-stretch px-4 md:px-8 lg:px-16 py-16 md:py-20 lg:py-32 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 overflow-hidden">
+      <div className="self-stretch px-4 md:px-8 lg:px-16 py-16 md:py-20 lg:py-32 bg-Color-Scheme-1-Background flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 overflow-hidden max-sm:pt-20">
         <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20">
           <div className="w-full max-w-[768px] flex flex-col justify-start items-center gap-4 md:gap-6">
             <div className="flex justify-start items-center">
@@ -161,7 +173,7 @@ export default function AboutUs() {
         </div>
       </div>
       { /* Section - Timeline */}
-      <div className="self-stretch px-4 md:px-8 lg:px-16 py-16 md:py-20 lg:py-28 bg-primary-50 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 overflow-hidden">
+      <div className="self-stretch px-4 md:px-8 lg:px-16 py-16 md:py-20 lg:py-28 bg-primary-50 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 overflow-hidden max-sm:pt-20">
         <div className="w-full max-w-[1280px] flex flex-col justify-start items-start gap-12 md:gap-16 lg:gap-20">
           <div className="w-full max-w-[768px] flex flex-col justify-start items-center gap-4 md:gap-6 mx-auto">
             <div className="flex justify-start items-center">
@@ -187,26 +199,37 @@ export default function AboutUs() {
         </div>
       </div>
       { /* Section - Impact */}
-      <div className="self-stretch bg-neutral-200 flex flex-col justify-start items-center gap-20 overflow-hidden">
-        <div className="self-stretch flex justify-start items-start">
-          <img className="flex-1 self-stretch w-full max-w-full" src="/assets/images/placeholder/Placeholder_Image.png" alt="About Us Image" />
-          <div className="flex-1 self-stretch pl-20 pr-16 py-28 flex flex-col justify-center items-start gap-8">
-            <div className="w-full max-w-[560px] flex flex-col justify-start items-start gap-8">
-              <div className="self-stretch flex flex-col justify-start items-start gap-8">
-                <div className="self-stretch flex flex-col justify-start items-start gap-4">
+      <div className="self-stretch bg-neutral-200 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 overflow-hidden max-sm:pt-20">
+        <div className="self-stretch flex flex-col-reverse lg:flex-row justify-start items-center lg:items-stretch">
+          {/* Image - First on mobile (reverse), first on desktop */}
+          <img 
+            className="flex-1 self-stretch w-full h-64 md:h-80 lg:h-auto object-cover" 
+            src="/assets/images/placeholder/Placeholder_Image.png" 
+            alt="Impact and Sustainability" 
+          />
+          {/* Text Content */}
+          <div className="flex-1 self-stretch px-4 md:px-8 lg:pl-20 lg:pr-16 py-12 md:py-20 lg:py-28 flex flex-col justify-center items-center lg:items-start gap-6 md:gap-8">
+            <div className="w-full max-w-[560px] flex flex-col justify-start items-start gap-6 md:gap-8">
+              <div className="self-stretch flex flex-col justify-start items-start gap-6 md:gap-8">
+                <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
                   <div className="flex justify-start items-center">
-                    <div className="text-center justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">Impact</div>
+                    <div className="text-center justify-start text-neutral-800 text-sm md:text-base font-semibold font-source-sans-pro leading-normal">Impact</div>
                   </div>
-                  <div className="self-stretch flex flex-col justify-start items-start gap-6">
-                    <div className="self-stretch justify-start"><span className="text-neutral-800 text-5xl font-medium font-inter leading-[58px]">Committed to sustainable </span><span className="text-neutral-800 text-5xl font-bold font-inter leading-[58px]">business transformation</span></div>
-                    <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">We believe in creating technology that not only drives business success but also contributes positively to society. Our initiatives focus on digital inclusion and technological education.</div>
+                  <div className="self-stretch flex flex-col justify-start items-start gap-4 md:gap-6">
+                    <div className="self-stretch justify-start">
+                      <span className="text-neutral-800 text-3xl sm:text-4xl md:text-5xl font-medium font-inter leading-tight sm:leading-snug md:leading-[58px]">Committed to sustainable </span>
+                      <span className="text-neutral-800 text-3xl sm:text-4xl md:text-5xl font-bold font-inter leading-tight sm:leading-snug md:leading-[58px]">business transformation</span>
+                    </div>
+                    <div className="self-stretch justify-start text-neutral-800 text-base md:text-lg font-normal font-source-sans-pro leading-6 md:leading-7">
+                      We believe in creating technology that not only drives business success but also contributes positively to society. Our initiatives focus on digital inclusion and technological education.
+                    </div>
                   </div>
                 </div>
-                <div className="self-stretch py-2 flex justify-start items-start gap-8 flex-wrap content-start">
-                  <img className="w-32 h-12" src="/assets/logo/xerply-logo-bl.svg" alt="Client Logo" />
+                <div className="self-stretch py-2 flex justify-start items-start gap-6 md:gap-8 flex-wrap content-start">
+                  <img className="w-24 h-9 md:w-32 md:h-12" src="/assets/logo/xerply-logo-bl.svg" alt="Client Logo" />
                 </div>
               </div>
-              <div className="flex justify-start items-center gap-6">
+              <div className="flex flex-col sm:flex-row justify-start items-center gap-4 md:gap-6 w-full sm:w-auto">
                 <Button variant="filled" size="lg" className="w-full sm:w-auto">
                   Explore
                 </Button>

@@ -68,36 +68,41 @@ export default function Contact() {
         </div>
       </div>
       { /* Section - Contact Information */}
-      <div className="self-stretch px-16 py-28 flex flex-col justify-start items-center gap-20 overflow-hidden">
-        <div className="w-full max-w-[1280px] flex flex-col justify-start items-start gap-20">
-          <div className="self-stretch flex justify-start items-start gap-20">
-            <div className="flex-1 flex flex-col justify-start items-start gap-8">
-              <div className="self-stretch flex flex-col justify-start items-start gap-4">
+      <div className="self-stretch px-4 md:px-8 lg:px-16 py-12 md:py-20 lg:py-28 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 overflow-hidden">
+        <div className="w-full max-w-[1280px] flex flex-col justify-start items-start gap-12 md:gap-16 lg:gap-20">
+          <div className="self-stretch flex flex-col lg:flex-row justify-start items-start gap-8 md:gap-12 lg:gap-20">
+            {/* Contact Info */}
+            <div className="flex-1 w-full flex flex-col justify-start items-start gap-6 md:gap-8">
+              <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
                 <div className="flex justify-start items-center">
-                  <div className="text-center justify-start text-neutral-800 text-base font-semibold font-source-sans-pro leading-normal">Talk</div>
+                  <div className="text-center justify-start text-neutral-800 text-sm md:text-base font-semibold font-source-sans-pro leading-normal">Talk</div>
                 </div>
-                <div className="self-stretch flex flex-col justify-start items-start gap-6">
-                  <div className="self-stretch justify-start text-neutral-800 text-5xl font-medium font-inter leading-[58px]">Contact us</div>
-                  <div className="self-stretch justify-start text-neutral-800 text-lg font-normal font-source-sans-pro leading-7">Let us help you streamline your business operations</div>
+                <div className="self-stretch flex flex-col justify-start items-start gap-4 md:gap-6">
+                  <div className="self-stretch justify-start text-neutral-800 text-3xl sm:text-4xl md:text-5xl font-medium font-inter leading-tight sm:leading-snug md:leading-[58px]">Contact us</div>
+                  <div className="self-stretch justify-start text-neutral-800 text-base md:text-lg font-normal font-source-sans-pro leading-6 md:leading-7">
+                    Let us help you streamline your business operations
+                  </div>
                 </div>
               </div>
-              <div className="py-2 flex flex-col justify-start items-start gap-4">
-                <div className="flex justify-start items-start gap-4">
-                  <Mail className="w-6 h-6 text-neutral-800" />
-                  <div className="justify-start text-neutral-800 text-base font-normal font-source-sans-pro leading-normal">support@xerply.com</div>
+              <div className="py-2 flex flex-col justify-start items-start gap-3 md:gap-4">
+                <div className="flex justify-start items-start gap-3 md:gap-4">
+                  <Mail className="w-5 h-5 md:w-6 md:h-6 text-neutral-800 flex-shrink-0" />
+                  <div className="justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">support@xerply.com</div>
                 </div>
-                <div className="flex justify-start items-start gap-4">
-                  <Phone className="w-6 h-6 text-neutral-800" />
-                  <div className="justify-start text-neutral-800 text-base font-normal font-source-sans-pro leading-normal">+54 11 4567 8901</div>
+                <div className="flex justify-start items-start gap-3 md:gap-4">
+                  <Phone className="w-5 h-5 md:w-6 md:h-6 text-neutral-800 flex-shrink-0" />
+                  <div className="justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">+54 11 4567 8901</div>
                 </div>
-                <div className="flex justify-start items-start gap-4">
-                  <MapPin className="w-6 h-6 text-neutral-800" />
-                  <div className="justify-start text-neutral-800 text-base font-normal font-source-sans-pro leading-normal">Tampa, USA</div>
+                <div className="flex justify-start items-start gap-3 md:gap-4">
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-neutral-800 flex-shrink-0" />
+                  <div className="justify-start text-neutral-800 text-sm md:text-base font-normal font-source-sans-pro leading-normal">Tampa, USA</div>
                 </div>
               </div>
             </div>
-            <form onSubmit={handleSubmit} className="flex-1 flex flex-col justify-start items-start gap-6">
-              <div className="self-stretch flex justify-start items-start gap-6">
+            
+            {/* Contact Form */}
+            <form onSubmit={handleSubmit} className="flex-1 w-full flex flex-col justify-start items-start gap-4 md:gap- max-sm:mb-24">
+              <div className="self-stretch flex flex-col sm:flex-row justify-start items-start gap-4 md:gap-6">
                 <Input
                   label="First name"
                   type="text"
@@ -118,7 +123,7 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="self-stretch flex justify-start items-start gap-6">
+              <div className="self-stretch flex flex-col sm:flex-row justify-start items-start gap-4 md:gap-6">
                 <Input
                   label="Email"
                   type="email"
@@ -176,6 +181,7 @@ export default function Contact() {
                 variant="filled"
                 size="lg"
                 type="submit"
+                className='max-sm:w-full'
               >
                 Send
               </Button>
@@ -186,14 +192,18 @@ export default function Contact() {
       { /* Section - CTA */}
       <div className="w-full self-stretch flex flex-col justify-start items-center relative">
         <div className="w-[1255.49px] h-[1255.49px] -left-[1000px] top-[700px] absolute origin-top-left rotate-[-57.78deg] bg-primary-50 rounded-[236.46px]" />
-        <div className="self-stretch px-14 py-28 flex flex-col justify-start items-center gap-20 z-10">
-          <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-20">
-            <div className="w-full max-w-[768px] flex flex-col justify-start items-center gap-8">
-              <div className="self-stretch flex flex-col justify-start items-center gap-6">
-                <div className="self-stretch text-center justify-start text-Color-Scheme-1-Text text-5xl font-medium font-inter leading-[58px]">Ready to transform your business?</div>
-                <div className="self-stretch text-center justify-start text-Color-Scheme-1-Text text-lg font-normal font-source-sans-pro leading-7">Experience the power of autonomous AI-driven ERP with a personalized demonstration tailored to your business needs.</div>
+        <div className="self-stretch px-4 md:px-8 lg:px-14 py-12 md:py-20 lg:py-28 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20 z-10">
+          <div className="w-full max-w-[1280px] flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-20">
+            <div className="w-full max-w-[768px] flex flex-col justify-start items-center gap-6 md:gap-8">
+              <div className="self-stretch flex flex-col justify-start items-center gap-4 md:gap-6">
+                <div className="self-stretch text-center justify-start text-Color-Scheme-1-Text text-3xl sm:text-4xl md:text-5xl font-medium font-inter leading-tight sm:leading-snug md:leading-[58px]">
+                  Ready to transform your business?
+                </div>
+                <div className="self-stretch text-center justify-start text-Color-Scheme-1-Text text-base md:text-lg font-normal font-source-sans-pro leading-6 md:leading-7">
+                  Experience the power of autonomous AI-driven ERP with a personalized demonstration tailored to your business needs.
+                </div>
               </div>
-              <div className="flex justify-start items-start gap-4">
+              <div className="flex flex-col sm:flex-row justify-start items-center gap-3 md:gap-4 w-full sm:w-auto">
                 <Button variant="filled" size="lg" className="w-full sm:w-auto">
                   Try it free
                 </Button>
@@ -204,7 +214,11 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <img alt="Decorative Element" src="/assets/images/confident-image.png" className="rounded-tl-[40px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[40px] z-10" />
+        <img 
+          alt="Decorative Element" 
+          src="/assets/images/confident-image.png" 
+          className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-tl-[40px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[40px] z-10" 
+        />
       </div>
     </div>
   );

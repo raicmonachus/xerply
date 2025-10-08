@@ -8,6 +8,7 @@ import Features from '@/components/Features';
 import Pricing from '@/components/Pricing';
 import AboutUs from '@/components/AboutUs';
 import Contact from '@/components/Contact';
+import ScrollToTop from '@/components/ui/ScrollToTop';
 
 export type PageType = 'home' | 'solutions' | 'features' | 'pricing' | 'about' | 'contact';
 
@@ -45,6 +46,7 @@ function App() {
       </main>
       <Testimonial />
       <Footer currentPage={currentPage} onNavigate={handleNavigate} />
+      <ScrollToTop />
     </div>
   );
 }

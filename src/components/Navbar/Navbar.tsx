@@ -22,6 +22,8 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const handleNavigation = (page: PageType) => {
     onNavigate(page);
     setMobileMenuOpen(false);
+    // Scroll to top when navigating
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

@@ -28,7 +28,7 @@ export default function Select({
   const selectId = id || `select-${label?.toLowerCase().replace(/\s+/g, '-')}`;
 
   return (
-    <div className={`flex flex-col justify-start items-start gap-2 ${fullWidth ? 'self-stretch' : ''}`}>
+    <div className={`flex flex-col justify-start items-start gap-2 ${fullWidth ? 'w-full' : ''}`}>
       {label && (
         <label 
           htmlFor={selectId}

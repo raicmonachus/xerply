@@ -19,7 +19,7 @@ export default function Textarea({
   const textareaId = id || `textarea-${label?.toLowerCase().replace(/\s+/g, '-')}`;
 
   return (
-    <div className={`flex flex-col justify-start items-start gap-2 ${fullWidth ? 'self-stretch' : ''}`}>
+    <div className={`flex flex-col justify-start items-start gap-2 ${fullWidth ? 'w-full' : ''}`}>
       {label && (
         <label 
           htmlFor={textareaId}
@@ -31,7 +31,7 @@ export default function Textarea({
       <textarea
         id={textareaId}
         rows={rows}
-        className={`self-stretch p-3 bg-black-alpha-1/5 rounded-md outline outline-1 outline-black-alpha-2/20 
+        className={`w-full p-3 bg-black-alpha-1/5 rounded-md outline outline-1 outline-black-alpha-2/20 
           text-neutral-800 text-base font-normal font-source-sans-pro leading-normal
           placeholder:text-black-alpha-2/20
           focus:outline-2 focus:outline-primary-500 focus:bg-white

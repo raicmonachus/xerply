@@ -34,9 +34,9 @@ export default function AutoCarousel({
   };
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative w-full h-full min-h-[400px] ${className}`}>
       {/* Carousel Items */}
-      <div className="relative overflow-hidden w-full h-full">
+      <div className="relative overflow-hidden w-full h-full min-h-[400px]">
         {items.map((item, index) => (
           <div
             key={index}
